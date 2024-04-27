@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../events/Events.hpp"
-#include "../defines.hpp"
-#include "wlr-layer-shell-unstable-v1-protocol.h"
-#include "../desktop/Window.hpp"
-#include "../desktop/Subsurface.hpp"
-#include "../desktop/Popup.hpp"
-#include "AnimatedVariable.hpp"
-#include "../desktop/WLSurface.hpp"
-#include "Region.hpp"
+use ../events/Events.hpp::
+use ../defines.hpp::
+use wlr-layer-shell-unstable-v1-protocol.h::
+use ../desktop/Window.hpp::
+use ../desktop/Subsurface.hpp::
+use ../desktop/Popup.hpp::
+use AnimatedVariable.hpp::
+use ../desktop/WLSurface.hpp::
+use Region.hpp::
 
 struct SLayerRule {
     std::string targetNamespace = "";

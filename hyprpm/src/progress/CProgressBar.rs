@@ -1,4 +1,4 @@
-#include "CProgressBar.hpp"
+use CProgressBar.hpp::
 
 #include <iostream>
 #include <algorithm>
@@ -9,7 +9,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
-#include "../helpers/Colors.hpp"
+use ../helpers/Colors.hpp::
 
 void CProgressBar::printMessageAbove(const std::string& msg) {
     struct winsize w;

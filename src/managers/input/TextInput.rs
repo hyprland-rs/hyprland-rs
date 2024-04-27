@@ -1,9 +1,9 @@
-#include "TextInput.hpp"
-#include "../../defines.hpp"
-#include "InputManager.hpp"
-#include "../../protocols/TextInputV1.hpp"
-#include "../../Compositor.hpp"
-#include "../../protocols/TextInputV3.hpp"
+use TextInput.hpp::
+use ../../defines.hpp::
+use InputManager.hpp::
+use ../../protocols/TextInputV1.hpp::
+use ../../Compositor.hpp::
+use ../../protocols/TextInputV3.hpp::
 
 CTextInput::CTextInput(STextInputV1* ti) : pV1Input(ti) {
     ti->pTextInput = this;

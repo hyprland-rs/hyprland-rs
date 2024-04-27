@@ -1,12 +1,12 @@
 #pragma once
 
-#include "../../defines.hpp"
+use ../../defines.hpp::
 #include <list>
 #include <any>
-#include "../../helpers/WLClasses.hpp"
-#include "../../helpers/Timer.hpp"
-#include "InputMethodRelay.hpp"
-#include "../../helpers/signal/Listener.hpp"
+use ../../helpers/WLClasses.hpp::
+use ../../helpers/Timer.hpp::
+use InputMethodRelay.hpp::
+use ../../helpers/signal/Listener.hpp::
 
 class CPointerConstraint;
 class CWindow;

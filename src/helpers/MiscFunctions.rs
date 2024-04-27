@@ -1,7 +1,7 @@
-#include "MiscFunctions.hpp"
-#include "../defines.hpp"
+use MiscFunctions.hpp::
+use ../defines.hpp::
 #include <algorithm>
-#include "../Compositor.hpp"
+use ../Compositor.hpp::
 #include <optional>
 #include <set>
 #include <sys/utsname.h>
@@ -680,7 +680,7 @@ int64_t getPPIDof(int64_t pid) {
 
     try {
         return std::stoll(pidstr);
-    } catch (std::exception& e) { return 0; }
+    } fn std::exception& e -> catch { return 0; }
 #endif
 }
 

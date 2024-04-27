@@ -1,8 +1,8 @@
-#include "defines.hpp"
-#include "debug/Log.hpp"
-#include "Compositor.hpp"
-#include "config/ConfigManager.hpp"
-#include "init/initHelpers.hpp"
+use defines.hpp::
+use debug/Log.hpp::
+use Compositor.hpp::
+use config/ConfigManager.hpp::
+use init/initHelpers.hpp::
 
 #include <iostream>
 #include <iterator>

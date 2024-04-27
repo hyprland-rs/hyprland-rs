@@ -1,10 +1,10 @@
-#include "Events.hpp"
+use Events.hpp::
 
-#include "../Compositor.hpp"
-#include "../helpers/WLClasses.hpp"
-#include "../managers/input/InputManager.hpp"
-#include "../render/Renderer.hpp"
-#include "../protocols/PointerGestures.hpp"
+use ../Compositor.hpp::
+use ../helpers/WLClasses.hpp::
+use ../managers/input/InputManager.hpp::
+use ../render/Renderer.hpp::
+use ../protocols/PointerGestures.hpp::
 
 // ---------------------------------------------------- //
 //   _____  ________      _______ _____ ______  _____   //

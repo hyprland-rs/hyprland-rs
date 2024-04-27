@@ -1,4 +1,4 @@
-#include "signal-safe.hpp"
+use signal-safe.hpp::
 
 #ifndef __GLIBC__
 #include <signal.h>

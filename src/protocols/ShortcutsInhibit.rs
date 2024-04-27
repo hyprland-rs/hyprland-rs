@@ -1,6 +1,6 @@
-#include "ShortcutsInhibit.hpp"
+use ShortcutsInhibit.hpp::
 #include <algorithm>
-#include "../Compositor.hpp"
+use ../Compositor.hpp::
 
 #define LOGM PROTO::shortcutsInhibit->protoLog
 

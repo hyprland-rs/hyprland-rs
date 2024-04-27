@@ -1,4 +1,4 @@
-#include "IdleInhibit.hpp"
+use IdleInhibit.hpp::
 
 CIdleInhibitor::CIdleInhibitor(SP<CIdleInhibitorResource> resource_, wlr_surface* surf_) : resource(resource_), surface(surf_) {
     ;

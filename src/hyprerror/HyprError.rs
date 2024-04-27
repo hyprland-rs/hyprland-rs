@@ -1,6 +1,6 @@
-#include "HyprError.hpp"
-#include "../Compositor.hpp"
-#include "../config/ConfigValue.hpp"
+use HyprError.hpp::
+use ../Compositor.hpp::
+use ../config/ConfigValue.hpp::
 
 CHyprError::CHyprError() {
     m_fFadeOpacity.create(AVARTYPE_FLOAT, g_pConfigManager->getAnimationPropertyConfig("fadeIn"), AVARDAMAGE_NONE);

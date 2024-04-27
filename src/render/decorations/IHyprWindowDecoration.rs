@@ -1,4 +1,4 @@
-#include "IHyprWindowDecoration.hpp"
+use IHyprWindowDecoration.hpp::
 
 class CWindow;
 

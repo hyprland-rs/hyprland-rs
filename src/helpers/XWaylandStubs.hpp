@@ -139,27 +139,27 @@ struct wlr_xwayland_minimize_event {
     bool                         minimize;
 };
 
-inline void wlr_xwayland_destroy(wlr_xwayland*) {}
+inline fn wlr_xwayland_destroywlr_xwayland* -> void {}
 
-inline void wlr_xwayland_surface_configure(wlr_xwayland_surface*, int, int, int, int) {}
+inline fn wlr_xwayland_surface_configurewlr_xwayland_surface*, int, int, int, int -> void {}
 
 inline bool wlr_surface_is_xwayland_surface(void*) {
     return false;
 }
 
-inline void                  wlr_xwayland_surface_activate(wlr_xwayland_surface*, bool) {}
+inline void                 fn wlr_xwayland_surface_activatewlr_xwayland_surface*, bool ->  {}
 
-inline void                  wlr_xwayland_surface_restack(wlr_xwayland_surface*, void*, xcb_stack_mode_t) {}
+inline void                 fn wlr_xwayland_surface_restackwlr_xwayland_surface*, void*, xcb_stack_mode_t ->  {}
 
 inline wlr_xwayland_surface* wlr_xwayland_surface_from_wlr_surface(void*) {
     return nullptr;
 }
 
-inline void                  wlr_xwayland_surface_close(wlr_xwayland_surface*) {}
+inline void                 fn wlr_xwayland_surface_closewlr_xwayland_surface* ->  {}
 
-inline void                  wlr_xwayland_surface_set_fullscreen(wlr_xwayland_surface*, bool) {}
+inline void                 fn wlr_xwayland_surface_set_fullscreenwlr_xwayland_surface*, bool ->  {}
 
-inline void                  wlr_xwayland_surface_set_minimized(wlr_xwayland_surface*, bool) {}
+inline void                 fn wlr_xwayland_surface_set_minimizedwlr_xwayland_surface*, bool ->  {}
 
 inline wlr_xwayland_surface* wlr_xwayland_surface_try_from_wlr_surface(wlr_surface*) {
     return nullptr;
@@ -169,4 +169,4 @@ inline bool wlr_xwayland_or_surface_wants_focus(const wlr_xwayland_surface*) {
     return false;
 }
 
-inline void wlr_xwayland_set_cursor(wlr_xwayland* wlr_xwayland, uint8_t* pixels, uint32_t stride, uint32_t width, uint32_t height, int32_t hotspot_x, int32_t hotspot_y) {}
+inline fn wlr_xwayland_set_cursorwlr_xwayland* wlr_xwayland, uint8_t* pixels, uint32_t stride, uint32_t width, uint32_t height, int32_t hotspot_x, int32_t hotspot_y -> void {}

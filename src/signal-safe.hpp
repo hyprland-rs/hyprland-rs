@@ -1,6 +1,6 @@
 #pragma once
 
-#include "defines.hpp"
+use defines.hpp::
 
 template <uint16_t N>
 class MaxLengthCString {
@@ -55,7 +55,7 @@ class MaxLengthCString {
 template <uint16_t BUFSIZE>
 class BufFileWriter {
   public:
-    inline BufFileWriter(int fd_) : m_writeBufPos(0), m_fd(fd_) {}
+    fn BufFileWriterint fd_) : m_writeBufPos(0), m_fd(fd_ -> inline {}
     ~BufFileWriter() {
         flush();
     }

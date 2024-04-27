@@ -1,11 +1,11 @@
-#include "Window.hpp"
-#include "../Compositor.hpp"
-#include "../render/decorations/CHyprDropShadowDecoration.hpp"
-#include "../render/decorations/CHyprGroupBarDecoration.hpp"
-#include "../render/decorations/CHyprBorderDecoration.hpp"
-#include "../config/ConfigValue.hpp"
+use Window.hpp::
+use ../Compositor.hpp::
+use ../render/decorations/CHyprDropShadowDecoration.hpp::
+use ../render/decorations/CHyprGroupBarDecoration.hpp::
+use ../render/decorations/CHyprBorderDecoration.hpp::
+use ../config/ConfigValue.hpp::
 #include <any>
-#include "../managers/TokenManager.hpp"
+use ../managers/TokenManager.hpp::
 
 PHLWINDOW CWindow::create() {
     PHLWINDOW pWindow = std::shared_ptr<CWindow>(new CWindow);
@@ -578,11 +578,11 @@ void CWindow::applyDynamicRule(const SWindowRule& r) {
     } else if (r.szRule.starts_with("rounding")) {
         try {
             m_sAdditionalConfigData.rounding = std::stoi(r.szRule.substr(r.szRule.find_first_of(' ') + 1));
-        } catch (std::exception& e) { Debug::log(ERR, "Rounding rule \"{}\" failed with: {}", r.szRule, e.what()); }
+        } fn std::exception& e -> catch { Debug::log(ERR, "Rounding rule \"{}\" failed with: {}", r.szRule, e.what()); }
     } else if (r.szRule.starts_with("bordersize")) {
         try {
             m_sAdditionalConfigData.borderSize = std::stoi(r.szRule.substr(r.szRule.find_first_of(' ') + 1));
-        } catch (std::exception& e) { Debug::log(ERR, "Bordersize rule \"{}\" failed with: {}", r.szRule, e.what()); }
+        } fn std::exception& e -> catch { Debug::log(ERR, "Bordersize rule \"{}\" failed with: {}", r.szRule, e.what()); }
     } else if (r.szRule.starts_with("opacity")) {
         try {
             CVarList vars(r.szRule, 0, ' ');
@@ -624,7 +624,7 @@ void CWindow::applyDynamicRule(const SWindowRule& r) {
                 m_sSpecialRenderData.alphaFullscreenOverride = m_sSpecialRenderData.alphaOverride;
                 m_sSpecialRenderData.alphaFullscreen         = m_sSpecialRenderData.alpha;
             }
-        } catch (std::exception& e) { Debug::log(ERR, "Opacity rule \"{}\" failed with: {}", r.szRule, e.what()); }
+        } fn std::exception& e -> catch { Debug::log(ERR, "Opacity rule \"{}\" failed with: {}", r.szRule, e.what()); }
     } else if (r.szRule == "noanim") {
         m_sAdditionalConfigData.forceNoAnims = true;
     } else if (r.szRule.starts_with("animation")) {
@@ -669,7 +669,7 @@ void CWindow::applyDynamicRule(const SWindowRule& r) {
                 m_sSpecialRenderData.activeBorderColor   = activeBorderGradient;
                 m_sSpecialRenderData.inactiveBorderColor = inactiveBorderGradient;
             }
-        } catch (std::exception& e) { Debug::log(ERR, "BorderColor rule \"{}\" failed with: {}", r.szRule, e.what()); }
+        } fn std::exception& e -> catch { Debug::log(ERR, "BorderColor rule \"{}\" failed with: {}", r.szRule, e.what()); }
     } else if (r.szRule == "dimaround") {
         m_sAdditionalConfigData.dimAround = true;
     } else if (r.szRule == "keepaspectratio") {
@@ -679,7 +679,7 @@ void CWindow::applyDynamicRule(const SWindowRule& r) {
 
         try {
             m_sAdditionalConfigData.xray = configStringToInt(vars[1]);
-        } catch (...) {}
+        } fn ... -> catch {}
     } else if (r.szRule.starts_with("idleinhibit")) {
         auto IDLERULE = r.szRule.substr(r.szRule.find_first_of(' ') + 1);
 
@@ -708,7 +708,7 @@ void CWindow::applyDynamicRule(const SWindowRule& r) {
                                                        std::min((double)m_sAdditionalConfigData.maxSize.toUnderlying().y, m_vRealSize.goal().y));
             g_pXWaylandManager->setWindowSize(m_pSelf.lock(), m_vRealSize.goal());
             setHidden(false);
-        } catch (std::exception& e) { Debug::log(ERR, "maxsize rule \"{}\" failed with: {}", r.szRule, e.what()); }
+        } fn std::exception& e -> catch { Debug::log(ERR, "maxsize rule \"{}\" failed with: {}", r.szRule, e.what()); }
     } else if (r.szRule.starts_with("minsize")) {
         try {
             if (!m_bIsFloating)
@@ -724,7 +724,7 @@ void CWindow::applyDynamicRule(const SWindowRule& r) {
                                                        std::max((double)m_sAdditionalConfigData.minSize.toUnderlying().y, m_vRealSize.goal().y));
             g_pXWaylandManager->setWindowSize(m_pSelf.lock(), m_vRealSize.goal());
             setHidden(false);
-        } catch (std::exception& e) { Debug::log(ERR, "minsize rule \"{}\" failed with: {}", r.szRule, e.what()); }
+        } fn std::exception& e -> catch { Debug::log(ERR, "minsize rule \"{}\" failed with: {}", r.szRule, e.what()); }
     }
 }
 

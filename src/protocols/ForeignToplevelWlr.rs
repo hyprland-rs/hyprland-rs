@@ -1,6 +1,6 @@
-#include "ForeignToplevelWlr.hpp"
+use ForeignToplevelWlr.hpp::
 #include <algorithm>
-#include "../Compositor.hpp"
+use ../Compositor.hpp::
 
 #define LOGM PROTO::foreignToplevelWlr->protoLog
 

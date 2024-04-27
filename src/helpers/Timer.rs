@@ -1,4 +1,4 @@
-#include "Timer.hpp"
+use Timer.hpp::
 
 void CTimer::reset() {
     m_tpLastReset = std::chrono::system_clock::now();

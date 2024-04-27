@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../defines.hpp"
-#include "text-input-unstable-v1-protocol.h"
+use ../defines.hpp::
+use text-input-unstable-v1-protocol.h::
 
 #include <vector>
 

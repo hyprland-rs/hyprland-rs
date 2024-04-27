@@ -6,7 +6,7 @@
 #include <thread>
 #include <wayland-server.h>
 
-#include "EventLoopTimer.hpp"
+use EventLoopTimer.hpp::
 
 class CEventLoopManager {
   public:

@@ -1,5 +1,5 @@
-#include "EventLoopManager.hpp"
-#include "../../debug/Log.hpp"
+use EventLoopManager.hpp::
+use ../../debug/Log.hpp::
 
 #include <algorithm>
 #include <limits>

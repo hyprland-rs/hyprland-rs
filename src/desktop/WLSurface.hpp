@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../defines.hpp"
-#include "../helpers/Region.hpp"
-#include "../helpers/signal/Signal.hpp"
+use ../defines.hpp::
+use ../helpers/Region.hpp::
+use ../helpers/signal/Signal.hpp::
 
 class CWindow;
 struct SLayerSurface;

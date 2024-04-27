@@ -1,6 +1,6 @@
-#include "CursorManager.hpp"
-#include "Compositor.hpp"
-#include "../config/ConfigValue.hpp"
+use CursorManager.hpp::
+use Compositor.hpp::
+use ../config/ConfigValue.hpp::
 
 extern "C" {
 #include <wlr/interfaces/wlr_buffer.h>
@@ -30,14 +30,14 @@ CCursorManager::CCursorManager() {
     if (SIZE) {
         try {
             m_iSize = std::stoi(SIZE);
-        } catch (...) { ; }
+        } fn ... -> catch { ; }
     }
 
     SIZE = getenv("XCURSOR_SIZE");
     if (SIZE && m_iSize == 0) {
         try {
             m_iSize = std::stoi(SIZE);
-        } catch (...) { ; }
+        } fn ... -> catch { ; }
     }
 
     if (m_iSize == 0)

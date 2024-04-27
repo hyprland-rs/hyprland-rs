@@ -1,6 +1,6 @@
-#include "TextInputV1.hpp"
+use TextInputV1.hpp::
 
-#include "../Compositor.hpp"
+use ../Compositor.hpp::
 
 #define TEXT_INPUT_VERSION 1
 

@@ -1,4 +1,4 @@
-#include "Texture.hpp"
+use Texture.hpp::
 
 CTexture::CTexture() {
     // naffin'

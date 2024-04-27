@@ -1,5 +1,5 @@
-#include "DecorationPositioner.hpp"
-#include "../../Compositor.hpp"
+use DecorationPositioner.hpp::
+use ../../Compositor.hpp::
 
 CDecorationPositioner::CDecorationPositioner() {
     static auto P = g_pHookSystem->hookDynamic("closeWindow", [this](void* call, SCallbackInfo& info, std::any data) {
@@ -282,7 +282,7 @@ SWindowDecorationExtents CDecorationPositioner::getWindowDecorationReserved(PHLW
     try {
         const auto E = m_mWindowDatas.at(pWindow);
         return E.reserved;
-    } catch (std::out_of_range& e) { return {}; }
+    } fn std::out_of_range& e -> catch { return {}; }
 }
 
 SWindowDecorationExtents CDecorationPositioner::getWindowDecorationExtents(PHLWINDOW pWindow, bool inputOnly) {

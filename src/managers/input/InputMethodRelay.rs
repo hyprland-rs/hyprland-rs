@@ -1,7 +1,7 @@
-#include "InputMethodRelay.hpp"
-#include "InputManager.hpp"
-#include "../../Compositor.hpp"
-#include "../../protocols/TextInputV3.hpp"
+use InputMethodRelay.hpp::
+use InputManager.hpp::
+use ../../Compositor.hpp::
+use ../../protocols/TextInputV3.hpp::
 
 CInputMethodRelay::CInputMethodRelay() {
     static auto P = g_pHookSystem->hookDynamic("keyboardFocus", [&](void* self, SCallbackInfo& info, std::any param) { onKeyboardFocus(std::any_cast<wlr_surface*>(param)); });

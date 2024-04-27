@@ -1,9 +1,9 @@
 #pragma once
 
 #include <any>
-#include "../../defines.hpp"
-#include "../../helpers/Region.hpp"
-#include "DecorationPositioner.hpp"
+use ../../defines.hpp::
+use ../../helpers/Region.hpp::
+use DecorationPositioner.hpp::
 
 enum eDecorationType {
     DECORATION_NONE = -1,

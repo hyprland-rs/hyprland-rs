@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../../helpers/WLListener.hpp"
-#include "../../macros.hpp"
-#include "../../helpers/Box.hpp"
-#include "../../helpers/signal/Listener.hpp"
+use ../../helpers/WLListener.hpp::
+use ../../macros.hpp::
+use ../../helpers/Box.hpp::
+use ../../helpers/signal/Listener.hpp::
 #include <memory>
 
 struct wlr_surface;

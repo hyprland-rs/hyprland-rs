@@ -3,9 +3,9 @@
 #include <string>
 #include <typeindex>
 #include <hyprlang.hpp>
-#include "../debug/Log.hpp"
-#include "../macros.hpp"
-#include "ConfigManager.hpp"
+use ../debug/Log.hpp::
+use ../macros.hpp::
+use ConfigManager.hpp::
 
 template <typename T>
 class CConfigValue {

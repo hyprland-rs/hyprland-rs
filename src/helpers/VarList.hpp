@@ -2,7 +2,7 @@
 #include <functional>
 #include <vector>
 #include <string>
-#include "../macros.hpp"
+use ../macros.hpp::
 
 class CVarList {
   public:

@@ -3,8 +3,8 @@
 #include <memory>
 #include <vector>
 #include <unordered_map>
-#include "WaylandProtocol.hpp"
-#include "alpha-modifier-v1.hpp"
+use WaylandProtocol.hpp::
+use alpha-modifier-v1.hpp::
 
 class CAlphaModifier {
   public:

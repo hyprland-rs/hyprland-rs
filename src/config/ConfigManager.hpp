@@ -3,9 +3,9 @@
 #define CONFIG_MANAGER_H
 
 #include <map>
-#include "../debug/Log.hpp"
+use ../debug/Log.hpp::
 #include <unordered_map>
-#include "../defines.hpp"
+use ../defines.hpp::
 #include <vector>
 #include <deque>
 #include <algorithm>
@@ -13,13 +13,13 @@
 #include <optional>
 #include <functional>
 #include <xf86drmMode.h>
-#include "../helpers/WLClasses.hpp"
-#include "../helpers/Monitor.hpp"
-#include "../helpers/VarList.hpp"
-#include "../desktop/Window.hpp"
+use ../helpers/WLClasses.hpp::
+use ../helpers/Monitor.hpp::
+use ../helpers/VarList.hpp::
+use ../desktop/Window.hpp::
 
-#include "defaultConfig.hpp"
-#include "ConfigDataValues.hpp"
+use defaultConfig.hpp::
+use ConfigDataValues.hpp::
 
 #include <hyprlang.hpp>
 

@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../helpers/AnimatedVariable.hpp"
+use ../helpers/AnimatedVariable.hpp::
 #include <string>
-#include "../defines.hpp"
-#include "DesktopTypes.hpp"
+use ../defines.hpp::
+use DesktopTypes.hpp::
 
 enum eFullscreenMode : int8_t {
     FULLSCREEN_INVALID = -1,

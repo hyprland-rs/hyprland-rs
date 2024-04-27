@@ -1,8 +1,8 @@
-#include "../Compositor.hpp"
-#include "../helpers/WLClasses.hpp"
-#include "../managers/input/InputManager.hpp"
-#include "../render/Renderer.hpp"
-#include "Events.hpp"
+use ../Compositor.hpp::
+use ../helpers/WLClasses.hpp::
+use ../managers/input/InputManager.hpp::
+use ../render/Renderer.hpp::
+use Events.hpp::
 
 // --------------------------------------------- //
 //    _           __     ________ _____   _____  //

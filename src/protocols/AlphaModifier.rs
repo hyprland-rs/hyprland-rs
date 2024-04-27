@@ -1,7 +1,7 @@
-#include "AlphaModifier.hpp"
+use AlphaModifier.hpp::
 #include <algorithm>
-#include "../desktop/WLSurface.hpp"
-#include "../render/Renderer.hpp"
+use ../desktop/WLSurface.hpp::
+use ../render/Renderer.hpp::
 
 #define LOGM PROTO::alphaModifier->protoLog
 

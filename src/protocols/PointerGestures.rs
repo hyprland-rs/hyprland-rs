@@ -1,5 +1,5 @@
-#include "PointerGestures.hpp"
-#include "../Compositor.hpp"
+use PointerGestures.hpp::
+use ../Compositor.hpp::
 
 #define LOGM PROTO::pointerGestures->protoLog
 

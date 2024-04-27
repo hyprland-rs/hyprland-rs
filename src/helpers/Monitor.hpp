@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../defines.hpp"
+use ../defines.hpp::
 #include <deque>
-#include "WLClasses.hpp"
+use WLClasses.hpp::
 #include <vector>
 #include <array>
 #include <memory>
 #include <xf86drmMode.h>
-#include "Timer.hpp"
-#include "Region.hpp"
+use Timer.hpp::
+use Region.hpp::
 #include <optional>
-#include "signal/Signal.hpp"
+use signal/Signal.hpp::
 
 // Enum for the different types of auto directions, e.g. auto-left, auto-up.
 enum class eAutoDirs {

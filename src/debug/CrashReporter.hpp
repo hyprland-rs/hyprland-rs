@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../defines.hpp"
+use ../defines.hpp::
 
 namespace CrashReporter {
     void createAndSaveCrash(int sig);

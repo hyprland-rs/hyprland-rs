@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Framebuffer.hpp"
+use Framebuffer.hpp::
 
 class CMonitor;
 

@@ -1,6 +1,6 @@
-#include "Popup.hpp"
-#include "../config/ConfigValue.hpp"
-#include "../Compositor.hpp"
+use Popup.hpp::
+use ../config/ConfigValue.hpp::
+use ../Compositor.hpp::
 
 CPopup::CPopup(PHLWINDOW pOwner) : m_pWindowOwner(pOwner) {
     initAllSignals();

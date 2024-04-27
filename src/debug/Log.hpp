@@ -4,8 +4,8 @@
 #include <iostream>
 #include <fstream>
 #include <chrono>
-#include "../includes.hpp"
-#include "../helpers/MiscFunctions.hpp"
+use ../includes.hpp::
+use ../helpers/MiscFunctions.hpp::
 
 #define LOGMESSAGESIZE   1024
 #define ROLLING_LOG_SIZE 4096

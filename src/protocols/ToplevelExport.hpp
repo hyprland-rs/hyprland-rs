@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../defines.hpp"
-#include "hyprland-toplevel-export-v1-protocol.h"
-#include "Screencopy.hpp"
+use ../defines.hpp::
+use hyprland-toplevel-export-v1-protocol.h::
+use Screencopy.hpp::
 
 #include <list>
 #include <vector>

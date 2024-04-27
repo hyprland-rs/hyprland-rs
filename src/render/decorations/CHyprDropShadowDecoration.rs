@@ -1,7 +1,7 @@
-#include "CHyprDropShadowDecoration.hpp"
+use CHyprDropShadowDecoration.hpp::
 
-#include "../../Compositor.hpp"
-#include "../../config/ConfigValue.hpp"
+use ../../Compositor.hpp::
+use ../../config/ConfigValue.hpp::
 
 CHyprDropShadowDecoration::CHyprDropShadowDecoration(PHLWINDOW pWindow) : IHyprWindowDecoration(pWindow) {
     m_pWindow = pWindow;

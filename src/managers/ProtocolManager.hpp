@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../defines.hpp"
-#include "../protocols/ToplevelExport.hpp"
-#include "../protocols/TextInputV1.hpp"
-#include "../protocols/GlobalShortcuts.hpp"
-#include "../protocols/Screencopy.hpp"
+use ../defines.hpp::
+use ../protocols/ToplevelExport.hpp::
+use ../protocols/TextInputV1.hpp::
+use ../protocols/GlobalShortcuts.hpp::
+use ../protocols/Screencopy.hpp::
 
 class CProtocolManager {
   public:

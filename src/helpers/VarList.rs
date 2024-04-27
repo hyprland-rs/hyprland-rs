@@ -1,5 +1,5 @@
-#include "MiscFunctions.hpp"
-#include "VarList.hpp"
+use MiscFunctions.hpp::
+use VarList.hpp::
 #include <ranges>
 #include <algorithm>
 

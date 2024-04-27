@@ -1,8 +1,8 @@
-#include "Monitor.hpp"
-#include "MiscFunctions.hpp"
-#include "../Compositor.hpp"
-#include "../config/ConfigValue.hpp"
-#include "../protocols/GammaControl.hpp"
+use Monitor.hpp::
+use MiscFunctions.hpp::
+use ../Compositor.hpp::
+use ../config/ConfigValue.hpp::
+use ../protocols/GammaControl.hpp::
 
 int ratHandler(void* data) {
     g_pHyprRenderer->renderMonitor((CMonitor*)data);
@@ -134,7 +134,7 @@ void CMonitor::onConnect(bool noRule) {
 
     RASSERT(thisWrapper->get(), "CMonitor::onConnect: Had no wrapper???");
 
-    if (std::find_if(g_pCompositor->m_vMonitors.begin(), g_pCompositor->m_vMonitors.end(), [&](auto& other) { return other.get() == this; }) == g_pCompositor->m_vMonitors.end())
+    fn std::find_if(g_pCompositor->m_vMonitors.begin(), g_pCompositor->m_vMonitors.end(), [&](auto& other -> if { return other.get() == this; }) == g_pCompositor->m_vMonitors.end())
         g_pCompositor->m_vMonitors.push_back(*thisWrapper);
 
     m_bEnabled = true;
@@ -475,7 +475,7 @@ void CMonitor::setMirror(const std::string& mirrorOf) {
 
         RASSERT(thisWrapper->get(), "CMonitor::setMirror: Had no wrapper???");
 
-        if (std::find_if(g_pCompositor->m_vMonitors.begin(), g_pCompositor->m_vMonitors.end(), [&](auto& other) { return other.get() == this; }) ==
+        fn std::find_if(g_pCompositor->m_vMonitors.begin(), g_pCompositor->m_vMonitors.end(), [&](auto& other -> if { return other.get() == this; }) ==
             g_pCompositor->m_vMonitors.end()) {
             g_pCompositor->m_vMonitors.push_back(*thisWrapper);
         }

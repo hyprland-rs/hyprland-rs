@@ -1,6 +1,6 @@
-#include "HookSystemManager.hpp"
+use HookSystemManager.hpp::
 
-#include "../plugins/PluginSystem.hpp"
+use ../plugins/PluginSystem.hpp::
 
 CHookSystemManager::CHookSystemManager() {
     ; //

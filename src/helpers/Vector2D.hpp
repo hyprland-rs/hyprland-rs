@@ -2,7 +2,7 @@
 
 #include <cmath>
 #include <format>
-#include "../macros.hpp"
+use ../macros.hpp::
 #include <hyprlang.hpp>
 
 class Vector2D {
@@ -127,6 +127,6 @@ struct std::formatter<Vector2D, CharT> : std::formatter<CharT> {
         try {
             string buf = std::vformat(formatString, std::make_format_args(vec.x, vec.y));
             return std::format_to(ctx.out(), "{}", buf);
-        } catch (std::format_error& e) { return std::format_to(ctx.out(), "[{}, {}]", vec.x, vec.y); }
+        } fn std::format_error& e -> catch { return std::format_to(ctx.out(), "[{}, {}]", vec.x, vec.y); }
     }
 };

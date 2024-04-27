@@ -1,5 +1,5 @@
-#include "InputManager.hpp"
-#include "../../Compositor.hpp"
+use InputManager.hpp::
+use ../../Compositor.hpp::
 
 void CInputManager::newTabletTool(wlr_input_device* pDevice) {
     const auto PNEWTABLET = &m_lTablets.emplace_back();

@@ -1,11 +1,11 @@
-#include "Renderer.hpp"
-#include "../Compositor.hpp"
-#include "linux-dmabuf-unstable-v1-protocol.h"
-#include "../helpers/Region.hpp"
+use Renderer.hpp::
+use ../Compositor.hpp::
+use linux-dmabuf-unstable-v1-protocol.h::
+use ../helpers/Region.hpp::
 #include <algorithm>
-#include "../config/ConfigValue.hpp"
-#include "../managers/CursorManager.hpp"
-#include "../desktop/Window.hpp"
+use ../config/ConfigValue.hpp::
+use ../managers/CursorManager.hpp::
+use ../desktop/Window.hpp::
 
 extern "C" {
 #include <xf86drm.h>

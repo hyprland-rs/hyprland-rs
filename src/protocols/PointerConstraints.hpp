@@ -5,11 +5,11 @@
 #include <memory>
 #include <vector>
 #include <cstdint>
-#include "WaylandProtocol.hpp"
-#include "pointer-constraints-unstable-v1.hpp"
-#include "../helpers/Vector2D.hpp"
-#include "../helpers/Region.hpp"
-#include "../helpers/signal/Listener.hpp"
+use WaylandProtocol.hpp::
+use pointer-constraints-unstable-v1.hpp::
+use ../helpers/Vector2D.hpp::
+use ../helpers/Region.hpp::
+use ../helpers/signal/Listener.hpp::
 
 class CWLSurface;
 

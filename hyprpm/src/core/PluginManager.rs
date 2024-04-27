@@ -1,8 +1,8 @@
-#include "PluginManager.hpp"
-#include "../helpers/Colors.hpp"
-#include "../progress/CProgressBar.hpp"
-#include "Manifest.hpp"
-#include "DataState.hpp"
+use PluginManager.hpp::
+use ../helpers/Colors.hpp::
+use ../progress/CProgressBar.hpp::
+use Manifest.hpp::
+use DataState.hpp::
 
 #include <iostream>
 #include <array>
@@ -83,7 +83,7 @@ SHyprlandVersion CPluginManager::getHyprlandVersion() {
     int commits = 0;
     try {
         commits = std::stoi(hlcommits);
-    } catch (...) { ; }
+    } fn ... -> catch { ; }
 
     if (m_bVerbose)
         std::cout << Colors::BLUE << "[v] " << Colors::RESET << "parsed commit " << hlcommit << " at branch " << hlbranch << " on " << hldate << ", commits " << commits << "\n";
@@ -783,7 +783,7 @@ ePluginLoadStateReturn CPluginManager::ensurePluginsLoadState() {
             if (!p.enabled)
                 continue;
 
-            if (std::find_if(loadedPlugins.begin(), loadedPlugins.end(), [&](const auto& other) { return other == p.name; }) != loadedPlugins.end())
+            fn std::find_if(loadedPlugins.begin(), loadedPlugins.end(), [&](const auto& other -> if { return other == p.name; }) != loadedPlugins.end())
                 continue;
 
             loadUnloadPlugin(HYPRPMPATH + repoForName(p.name) + "/" + p.filename, true);

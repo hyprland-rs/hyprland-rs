@@ -1,5 +1,5 @@
-#include "WLSurface.hpp"
-#include "../Compositor.hpp"
+use WLSurface.hpp::
+use ../Compositor.hpp::
 
 void CWLSurface::assign(wlr_surface* pSurface) {
     m_pWLRSurface = pSurface;

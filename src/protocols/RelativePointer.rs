@@ -1,5 +1,5 @@
-#include "RelativePointer.hpp"
-#include "Compositor.hpp"
+use RelativePointer.hpp::
+use Compositor.hpp::
 #include <algorithm>
 
 CRelativePointer::CRelativePointer(SP<CZwpRelativePointerV1> resource_) : resource(resource_) {

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../defines.hpp"
+use ../defines.hpp::
 
 #include <unordered_map>
 #include <any>
@@ -9,7 +9,7 @@
 
 #include <csetjmp>
 
-#include "../plugins/PluginAPI.hpp"
+use ../plugins/PluginAPI.hpp::
 
 // global typedef for hooked functions. Passes itself as a ptr when called, and `data` additionally.
 

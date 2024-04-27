@@ -1,12 +1,12 @@
 #pragma once
 
-#include "../defines.hpp"
+use ../defines.hpp::
 #include <list>
-#include "../helpers/Monitor.hpp"
-#include "OpenGL.hpp"
-#include "Renderbuffer.hpp"
-#include "../helpers/Timer.hpp"
-#include "../helpers/Region.hpp"
+use ../helpers/Monitor.hpp::
+use OpenGL.hpp::
+use Renderbuffer.hpp::
+use ../helpers/Timer.hpp::
+use ../helpers/Region.hpp::
 
 struct SMonitorRule;
 class CWorkspace;

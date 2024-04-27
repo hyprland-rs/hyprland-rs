@@ -2,8 +2,8 @@
 
 #include <memory>
 #include <vector>
-#include "WaylandProtocol.hpp"
-#include "wlr-foreign-toplevel-management-unstable-v1.hpp"
+use WaylandProtocol.hpp::
+use wlr-foreign-toplevel-management-unstable-v1.hpp::
 
 class CWindow;
 class CMonitor;

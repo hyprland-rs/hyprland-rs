@@ -1,6 +1,6 @@
 #pragma once
-#include "../defines.hpp"
-#include "hyprland-global-shortcuts-v1-protocol.h"
+use ../defines.hpp::
+use hyprland-global-shortcuts-v1-protocol.h::
 #include <vector>
 
 struct SShortcut {

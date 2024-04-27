@@ -1,6 +1,6 @@
-#include "AnimatedVariable.hpp"
-#include "../managers/AnimationManager.hpp"
-#include "../config/ConfigManager.hpp"
+use AnimatedVariable.hpp::
+use ../managers/AnimationManager.hpp::
+use ../config/ConfigManager.hpp::
 
 CBaseAnimatedVariable::CBaseAnimatedVariable(ANIMATEDVARTYPE type) : m_Type(type) {
     ; // dummy var

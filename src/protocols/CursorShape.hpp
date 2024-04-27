@@ -2,9 +2,9 @@
 
 #include <memory>
 #include <unordered_map>
-#include "WaylandProtocol.hpp"
-#include "../helpers/signal/Signal.hpp"
-#include "cursor-shape-v1.hpp"
+use WaylandProtocol.hpp::
+use ../helpers/signal/Signal.hpp::
+use cursor-shape-v1.hpp::
 
 class CCursorShapeProtocol : public IWaylandProtocol {
   public:

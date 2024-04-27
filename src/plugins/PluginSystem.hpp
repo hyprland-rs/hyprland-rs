@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../defines.hpp"
-#include "PluginAPI.hpp"
+use ../defines.hpp::
+use PluginAPI.hpp::
 #include <csetjmp>
 
 class IHyprWindowDecoration;

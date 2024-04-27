@@ -1,4 +1,4 @@
-#include "FractionalScale.hpp"
+use FractionalScale.hpp::
 
 #define LOGM PROTO::fractional->protoLog
 

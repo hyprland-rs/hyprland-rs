@@ -3,8 +3,8 @@
 #include <fstream>
 #include <mutex>
 
-#include "../defines.hpp"
-#include "../helpers/MiscFunctions.hpp"
+use ../defines.hpp::
+use ../helpers/MiscFunctions.hpp::
 
 struct SHyprIPCEvent {
     std::string event;

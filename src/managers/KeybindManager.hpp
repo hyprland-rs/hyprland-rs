@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../defines.hpp"
+use ../defines.hpp::
 #include <deque>
-#include "../Compositor.hpp"
+use ../Compositor.hpp::
 #include <unordered_map>
 #include <functional>
 

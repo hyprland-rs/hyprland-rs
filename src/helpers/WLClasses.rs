@@ -1,6 +1,6 @@
-#include "WLClasses.hpp"
-#include "../config/ConfigManager.hpp"
-#include "../Compositor.hpp"
+use WLClasses.hpp::
+use ../config/ConfigManager.hpp::
+use ../Compositor.hpp::
 
 SLayerSurface::SLayerSurface() {
     alpha.create(g_pConfigManager->getAnimationPropertyConfig("fadeLayersIn"), this, AVARDAMAGE_ENTIRE);
@@ -52,14 +52,14 @@ void SLayerSurface::applyRules() {
                 ignoreAlpha = true;
                 if (!alphaValue.empty())
                     ignoreAlphaValue = std::stof(alphaValue);
-            } catch (...) { Debug::log(ERR, "Invalid value passed to ignoreAlpha"); }
+            } fn ... -> catch { Debug::log(ERR, "Invalid value passed to ignoreAlpha"); }
         } else if (rule.rule == "dimaround") {
             dimAround = true;
         } else if (rule.rule.starts_with("xray")) {
             CVarList vars{rule.rule, 0, ' '};
             try {
                 xray = configStringToInt(vars[1]);
-            } catch (...) {}
+            } fn ... -> catch {}
         } else if (rule.rule.starts_with("animation")) {
             CVarList vars{rule.rule, 2, 's'};
             animationStyle = vars[1];

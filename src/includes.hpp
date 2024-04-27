@@ -128,16 +128,16 @@ extern "C" {
 #endif
 
 #if !WLR_HAS_X11_BACKEND
-#include "helpers/X11Stubs.hpp"
+use helpers/X11Stubs.hpp::
 #endif
 
 #ifdef NO_XWAYLAND
 #define XWAYLAND false
-#include "helpers/XWaylandStubs.hpp"
+use helpers/XWaylandStubs.hpp::
 #else
 #define XWAYLAND true
 #endif
 
-#include "helpers/Vector2D.hpp"
-#include "helpers/Box.hpp"
-#include "SharedDefs.hpp"
+use helpers/Vector2D.hpp::
+use helpers/Box.hpp::
+use SharedDefs.hpp::

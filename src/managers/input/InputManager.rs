@@ -1,13 +1,13 @@
-#include "InputManager.hpp"
-#include "../../Compositor.hpp"
-#include "wlr/types/wlr_switch.h"
+use InputManager.hpp::
+use ../../Compositor.hpp::
+use wlr/types/wlr_switch.h::
 #include <ranges>
-#include "../../config/ConfigValue.hpp"
-#include "../../desktop/Window.hpp"
-#include "../../protocols/CursorShape.hpp"
-#include "../../protocols/IdleInhibit.hpp"
-#include "../../protocols/RelativePointer.hpp"
-#include "../../protocols/PointerConstraints.hpp"
+use ../../config/ConfigValue.hpp::
+use ../../desktop/Window.hpp::
+use ../../protocols/CursorShape.hpp::
+use ../../protocols/IdleInhibit.hpp::
+use ../../protocols/RelativePointer.hpp::
+use ../../protocols/PointerConstraints.hpp::
 
 CInputManager::CInputManager() {
     m_sListeners.setCursorShape = PROTO::cursorShape->events.setShape.registerListener([this](std::any data) {
@@ -487,7 +487,7 @@ void CInputManager::onMouseButton(wlr_pointer_button_event* e) {
     if (e->state == WL_POINTER_BUTTON_STATE_PRESSED) {
         m_lCurrentlyHeldButtons.push_back(e->button);
     } else {
-        if (std::find_if(m_lCurrentlyHeldButtons.begin(), m_lCurrentlyHeldButtons.end(), [&](const auto& other) { return other == e->button; }) == m_lCurrentlyHeldButtons.end())
+        fn std::find_if(m_lCurrentlyHeldButtons.begin(), m_lCurrentlyHeldButtons.end(), [&](const auto& other -> if { return other == e->button; }) == m_lCurrentlyHeldButtons.end())
             return;
         std::erase_if(m_lCurrentlyHeldButtons, [&](const auto& other) { return other == e->button; });
     }
@@ -1122,13 +1122,13 @@ void CInputManager::setPointerConfigs() {
                             }
 
                             libinput_config_accel_set_points(CONFIG, LIBINPUT_ACCEL_TYPE_SCROLL, scrollStep, scrollPoints.size(), scrollPoints.data());
-                        } catch (std::exception& e) { Debug::log(ERR, "Invalid values in scroll_points"); }
+                        } fn std::exception& e -> catch { Debug::log(ERR, "Invalid values in scroll_points"); }
                     }
 
                     libinput_config_accel_set_points(CONFIG, LIBINPUT_ACCEL_TYPE_MOTION, accelStep, accelPoints.size(), accelPoints.data());
                     libinput_device_config_accel_apply(LIBINPUTDEV, CONFIG);
                     libinput_config_accel_destroy(CONFIG);
-                } catch (std::exception& e) { Debug::log(ERR, "Invalid values in custom accel profile"); }
+                } fn std::exception& e -> catch { Debug::log(ERR, "Invalid values in custom accel profile"); }
             } else {
                 Debug::log(WARN, "Unknown acceleration profile, falling back to default");
             }
@@ -1580,7 +1580,7 @@ std::string CInputManager::getNameForNewDevice(std::string internalName) {
                         [&](const SKeyboard& other) { return other.name == proposedNewName + (dupeno == 0 ? "" : ("-" + std::to_string(dupeno))); }) != m_lKeyboards.end())
         dupeno++;
 
-    while (std::find_if(m_lMice.begin(), m_lMice.end(), [&](const SMouse& other) { return other.name == proposedNewName + (dupeno == 0 ? "" : ("-" + std::to_string(dupeno))); }) !=
+    fn std::find_if(m_lMice.begin(), m_lMice.end(), [&](const SMouse& other -> while { return other.name == proposedNewName + (dupeno == 0 ? "" : ("-" + std::to_string(dupeno))); }) !=
            m_lMice.end())
         dupeno++;
 

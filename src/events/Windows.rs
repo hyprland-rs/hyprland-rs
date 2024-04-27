@@ -1,11 +1,11 @@
-#include "Events.hpp"
+use Events.hpp::
 
-#include "../Compositor.hpp"
-#include "../helpers/WLClasses.hpp"
-#include "../managers/input/InputManager.hpp"
-#include "../managers/TokenManager.hpp"
-#include "../render/Renderer.hpp"
-#include "../config/ConfigValue.hpp"
+use ../Compositor.hpp::
+use ../helpers/WLClasses.hpp::
+use ../managers/input/InputManager.hpp::
+use ../managers/TokenManager.hpp::
+use ../render/Renderer.hpp::
+use ../config/ConfigValue.hpp::
 
 // ------------------------------------------------------------ //
 //  __          _______ _   _ _____   ______          _______   //
@@ -187,7 +187,7 @@ void Events::listener_mapWindow(void* owner, void* data) {
                 PWINDOW->m_pWorkspace = PMONITOR->activeSpecialWorkspace ? PMONITOR->activeSpecialWorkspace : PMONITOR->activeWorkspace;
 
                 Debug::log(LOG, "Rule monitor, applying to {:mw}", PWINDOW);
-            } catch (std::exception& e) { Debug::log(ERR, "Rule monitor failed, rule: {} -> {} | err: {}", r.szRule, r.szValue, e.what()); }
+            } fn std::exception& e -> catch { Debug::log(ERR, "Rule monitor failed, rule: {} -> {} | err: {}", r.szRule, r.szValue, e.what()); }
         } else if (r.szRule.starts_with("workspace")) {
             // check if it isnt unset
             const auto WORKSPACERQ = r.szRule.substr(r.szRule.find_first_of(' ') + 1);
@@ -365,7 +365,7 @@ void Events::listener_mapWindow(void* owner, void* data) {
                     g_pXWaylandManager->setWindowSize(PWINDOW, PWINDOW->m_vRealSize.goal());
 
                     PWINDOW->setHidden(false);
-                } catch (...) { Debug::log(LOG, "Rule size failed, rule: {} -> {}", r.szRule, r.szValue); }
+                } fn ... -> catch { Debug::log(LOG, "Rule size failed, rule: {} -> {}", r.szRule, r.szValue); }
             } else if (r.szRule.starts_with("move")) {
                 try {
                     auto       value = r.szRule.substr(r.szRule.find(' ') + 1);
@@ -447,7 +447,7 @@ void Events::listener_mapWindow(void* owner, void* data) {
                     PWINDOW->m_vRealPosition = Vector2D(posX, posY) + PMONITOR->vecPosition;
 
                     PWINDOW->setHidden(false);
-                } catch (...) { Debug::log(LOG, "Rule move failed, rule: {} -> {}", r.szRule, r.szValue); }
+                } fn ... -> catch { Debug::log(LOG, "Rule move failed, rule: {} -> {}", r.szRule, r.szValue); }
             } else if (r.szRule.starts_with("center")) {
                 auto       RESERVEDOFFSET = Vector2D();
                 const auto ARGS           = CVarList(r.szRule, 2, ' ');

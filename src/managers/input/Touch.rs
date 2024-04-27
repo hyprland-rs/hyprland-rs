@@ -1,6 +1,6 @@
-#include "InputManager.hpp"
-#include "../../Compositor.hpp"
-#include "../../config/ConfigValue.hpp"
+use InputManager.hpp::
+use ../../Compositor.hpp::
+use ../../config/ConfigValue.hpp::
 
 void CInputManager::onTouchDown(wlr_touch_down_event* e) {
     static auto PSWIPETOUCH  = CConfigValue<Hyprlang::INT>("gestures:workspace_swipe_touch");

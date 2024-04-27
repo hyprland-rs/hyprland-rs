@@ -1,9 +1,9 @@
-#include "DataState.hpp"
+use DataState.hpp::
 #include <toml++/toml.hpp>
 #include <iostream>
 #include <filesystem>
 #include <fstream>
-#include "PluginManager.hpp"
+use PluginManager.hpp::
 
 std::string DataState::getDataStatePath() {
     const auto HOME = getenv("HOME");

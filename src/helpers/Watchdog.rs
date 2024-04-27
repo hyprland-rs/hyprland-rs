@@ -1,7 +1,7 @@
-#include "Watchdog.hpp"
+use Watchdog.hpp::
 #include <signal.h>
-#include "config/ConfigManager.hpp"
-#include "../config/ConfigValue.hpp"
+use config/ConfigManager.hpp::
+use ../config/ConfigValue.hpp::
 
 CWatchdog::~CWatchdog() {
     m_bExitThread = true;

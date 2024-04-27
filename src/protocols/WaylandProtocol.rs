@@ -1,5 +1,5 @@
-#include "WaylandProtocol.hpp"
-#include "../Compositor.hpp"
+use WaylandProtocol.hpp::
+use ../Compositor.hpp::
 
 static void bindManagerInternal(wl_client* client, void* data, uint32_t ver, uint32_t id) {
     ((IWaylandProtocol*)data)->bindManager(client, data, ver, id);

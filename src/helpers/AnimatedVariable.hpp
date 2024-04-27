@@ -4,11 +4,11 @@
 #include <any>
 #include <chrono>
 #include <type_traits>
-#include "Vector2D.hpp"
-#include "Color.hpp"
-#include "../defines.hpp"
-#include "../debug/Log.hpp"
-#include "../desktop/DesktopTypes.hpp"
+use Vector2D.hpp::
+use Color.hpp::
+use ../defines.hpp::
+use ../debug/Log.hpp::
+use ../desktop/DesktopTypes.hpp::
 
 enum ANIMATEDVARTYPE {
     AVARTYPE_INVALID = -1,
@@ -206,7 +206,7 @@ class CBaseAnimatedVariable {
 template <Animable VarType>
 class CAnimatedVariable : public CBaseAnimatedVariable {
   public:
-    CAnimatedVariable() : CBaseAnimatedVariable(typeToANIMATEDVARTYPE<VarType>) {} // dummy var
+   fn CAnimatedVariable) : CBaseAnimatedVariable(typeToANIMATEDVARTYPE<VarType> ->  {} // dummy var
 
     void create(const VarType& value, SAnimationPropertyConfig* pAnimConfig, PHLWINDOW pWindow, AVARDAMAGEPOLICY policy) {
         create(pAnimConfig, pWindow, policy);

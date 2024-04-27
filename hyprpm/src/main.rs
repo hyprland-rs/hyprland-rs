@@ -1,7 +1,7 @@
-#include "progress/CProgressBar.hpp"
-#include "helpers/Colors.hpp"
-#include "core/PluginManager.hpp"
-#include "core/DataState.hpp"
+use progress/CProgressBar.hpp::
+use helpers/Colors.hpp::
+use core/PluginManager.hpp::
+use core/DataState.hpp::
 
 #include <iostream>
 #include <vector>

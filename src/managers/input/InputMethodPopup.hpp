@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../../helpers/WLListener.hpp"
-#include "../../desktop/WLSurface.hpp"
-#include "../../macros.hpp"
-#include "../../helpers/Box.hpp"
+use ../../helpers/WLListener.hpp::
+use ../../desktop/WLSurface.hpp::
+use ../../macros.hpp::
+use ../../helpers/Box.hpp::
 
 struct wlr_input_popup_surface_v2;
 

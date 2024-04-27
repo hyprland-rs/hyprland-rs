@@ -1,4 +1,4 @@
-#include "Signal.hpp"
+use Signal.hpp::
 #include <algorithm>
 
 void CSignal::emit(std::any data) {

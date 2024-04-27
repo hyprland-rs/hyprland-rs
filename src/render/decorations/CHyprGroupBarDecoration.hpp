@@ -1,8 +1,8 @@
 #pragma once
 
-#include "IHyprWindowDecoration.hpp"
+use IHyprWindowDecoration.hpp::
 #include <deque>
-#include "../Texture.hpp"
+use ../Texture.hpp::
 #include <string>
 #include <memory>
 

@@ -1,9 +1,9 @@
-#include "Screencopy.hpp"
-#include "../Compositor.hpp"
+use Screencopy.hpp::
+use ../Compositor.hpp::
 
 #include <algorithm>
 
-#include "ToplevelExportWlrFuncs.hpp"
+use ToplevelExportWlrFuncs.hpp::
 
 #define SCREENCOPY_VERSION 3
 

@@ -1,7 +1,7 @@
-#include "SessionLockManager.hpp"
-#include "../Compositor.hpp"
-#include "../config/ConfigValue.hpp"
-#include "../protocols/FractionalScale.hpp"
+use SessionLockManager.hpp::
+use ../Compositor.hpp::
+use ../config/ConfigValue.hpp::
+use ../protocols/FractionalScale.hpp::
 
 static void handleSurfaceMap(void* owner, void* data) {
     const auto PSURFACE = (SSessionLockSurface*)owner;

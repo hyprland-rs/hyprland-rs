@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../defines.hpp"
+use ../defines.hpp::
 #include <vector>
-#include "WLSurface.hpp"
+use WLSurface.hpp::
 
 class CPopup;
 

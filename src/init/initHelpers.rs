@@ -1,4 +1,4 @@
-#include "initHelpers.hpp"
+use initHelpers.hpp::
 
 bool Init::isSudo() {
     return getuid() != geteuid() || !geteuid();

@@ -2,7 +2,7 @@
 
 #include <vector>
 #include <memory>
-#include "Subsurface.hpp"
+use Subsurface.hpp::
 
 struct SLayerSurface;
 

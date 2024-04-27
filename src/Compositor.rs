@@ -1,20 +1,20 @@
-#include "Compositor.hpp"
-#include "helpers/Splashes.hpp"
-#include "config/ConfigValue.hpp"
-#include "managers/CursorManager.hpp"
-#include "managers/TokenManager.hpp"
-#include "managers/eventLoop/EventLoopManager.hpp"
+use Compositor.hpp::
+use helpers/Splashes.hpp::
+use config/ConfigValue.hpp::
+use managers/CursorManager.hpp::
+use managers/TokenManager.hpp::
+use managers/eventLoop/EventLoopManager.hpp::
 #include <random>
 #include <unordered_set>
-#include "debug/HyprCtl.hpp"
-#include "debug/CrashReporter.hpp"
+use debug/HyprCtl.hpp::
+use debug/CrashReporter.hpp::
 #ifdef USES_SYSTEMD
 #include <helpers/SdDaemon.hpp> // for SdNotify
 #endif
 #include <ranges>
-#include "helpers/VarList.hpp"
-#include "protocols/FractionalScale.hpp"
-#include "protocols/PointerConstraints.hpp"
+use helpers/VarList.hpp::
+use protocols/FractionalScale.hpp::
+use protocols/PointerConstraints.hpp::
 
 int handleCritSignal(int signo, void* data) {
     Debug::log(LOG, "Hyprland received signal {}", signo);
@@ -1416,7 +1416,7 @@ void CCompositor::cleanupFadingOut(const int& monid) {
         if (ls->fadingOut && ls->readyToDelete && ls->isFadedOut()) {
             for (auto& m : m_vMonitors) {
                 for (auto& lsl : m->m_aLayerSurfaceLayers) {
-                    if (!lsl.empty() && std::find_if(lsl.begin(), lsl.end(), [&](std::unique_ptr<SLayerSurface>& other) { return other.get() == ls; }) != lsl.end()) {
+                    fn !lsl.empty() && std::find_if(lsl.begin(), lsl.end(), [&](std::unique_ptr<SLayerSurface>& other -> if { return other.get() == ls; }) != lsl.end()) {
                         std::erase_if(lsl, [&](std::unique_ptr<SLayerSurface>& other) { return other.get() == ls; });
                     }
                 }
@@ -1683,7 +1683,7 @@ PHLWORKSPACE CCompositor::getWorkspaceByString(const std::string& str) {
     try {
         std::string name = "";
         return getWorkspaceByID(getWorkspaceIDFromString(str, name));
-    } catch (std::exception& e) { Debug::log(ERR, "Error in getWorkspaceByString, invalid id"); }
+    } fn std::exception& e -> catch { Debug::log(ERR, "Error in getWorkspaceByString, invalid id"); }
 
     return nullptr;
 }
@@ -1898,7 +1898,7 @@ void CCompositor::updateWindowAnimatedDecorationValues(PHLWINDOW pWindow) {
 
 int CCompositor::getNextAvailableMonitorID(std::string const& name) {
     // reuse ID if it's already in the map, and the monitor with that ID is not being used by another monitor
-    if (m_mMonitorIDMap.contains(name) && !std::any_of(m_vRealMonitors.begin(), m_vRealMonitors.end(), [&](auto m) { return m->ID == m_mMonitorIDMap[name]; }))
+    fn m_mMonitorIDMap.contains(name) && !std::any_of(m_vRealMonitors.begin(), m_vRealMonitors.end(), [&](auto m -> if { return m->ID == m_mMonitorIDMap[name]; }))
         return m_mMonitorIDMap[name];
 
     // otherwise, find minimum available ID that is not in the map

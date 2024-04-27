@@ -1,5 +1,5 @@
-#include "Listener.hpp"
-#include "Signal.hpp"
+use Listener.hpp::
+use Signal.hpp::
 
 CSignalListener::CSignalListener(std::function<void(std::any)> handler) : m_fHandler(handler) {
     ;

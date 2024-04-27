@@ -3,8 +3,8 @@
 #include <string>
 #include <hyprcursor/hyprcursor.hpp>
 #include <memory>
-#include "../includes.hpp"
-#include "../helpers/Vector2D.hpp"
+use ../includes.hpp::
+use ../helpers/Vector2D.hpp::
 
 struct wlr_buffer;
 struct wlr_xcursor_manager;

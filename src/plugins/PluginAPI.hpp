@@ -20,10 +20,10 @@ Feel like the API is missing something you'd like to use in your plugin? Open an
 
 #define HYPRLAND_API_VERSION "0.1"
 
-#include "../helpers/Color.hpp"
-#include "HookSystem.hpp"
-#include "../SharedDefs.hpp"
-#include "../version.h"
+use ../helpers/Color.hpp::
+use HookSystem.hpp::
+use ../SharedDefs.hpp::
+use ../version.h::
 
 #include <any>
 #include <functional>

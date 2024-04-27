@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../defines.hpp"
-#include "../helpers/Timer.hpp"
-#include "../helpers/Monitor.hpp"
-#include "../render/Texture.hpp"
-#include "../SharedDefs.hpp"
+use ../defines.hpp::
+use ../helpers/Timer.hpp::
+use ../helpers/Monitor.hpp::
+use ../render/Texture.hpp::
+use ../SharedDefs.hpp::
 
 #include <deque>
 

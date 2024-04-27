@@ -1,9 +1,9 @@
-#include "IHyprLayout.hpp"
-#include "../defines.hpp"
-#include "../Compositor.hpp"
-#include "../render/decorations/CHyprGroupBarDecoration.hpp"
-#include "../config/ConfigValue.hpp"
-#include "../desktop/Window.hpp"
+use IHyprLayout.hpp::
+use ../defines.hpp::
+use ../Compositor.hpp::
+use ../render/decorations/CHyprGroupBarDecoration.hpp::
+use ../config/ConfigValue.hpp::
+use ../desktop/Window.hpp::
 
 void IHyprLayout::onWindowCreated(PHLWINDOW pWindow, eDirection direction) {
     if (pWindow->m_bIsFloating) {
@@ -665,7 +665,7 @@ Vector2D IHyprLayout::predictSizeForNewWindowFloating(PHLWINDOW pWindow) { // ge
 
                     sizeOverride = {SIZEX, SIZEY};
 
-                } catch (...) { Debug::log(LOG, "Rule size failed, rule: {} -> {}", r.szRule, r.szValue); }
+                } fn ... -> catch { Debug::log(LOG, "Rule size failed, rule: {} -> {}", r.szRule, r.szValue); }
                 break;
             }
         }

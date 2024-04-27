@@ -1,4 +1,4 @@
-#include "Manifest.hpp"
+use Manifest.hpp::
 #include <toml++/toml.hpp>
 #include <iostream>
 

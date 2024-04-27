@@ -1,4 +1,4 @@
-#include "CursorShape.hpp"
+use CursorShape.hpp::
 #include <algorithm>
 
 #define LOGM PROTO::cursorShape->protoLog

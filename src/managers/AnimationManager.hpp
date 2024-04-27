@@ -1,12 +1,12 @@
 #pragma once
 
-#include "../defines.hpp"
+use ../defines.hpp::
 #include <list>
 #include <unordered_map>
-#include "../helpers/AnimatedVariable.hpp"
-#include "../helpers/BezierCurve.hpp"
-#include "../helpers/Timer.hpp"
-#include "eventLoop/EventLoopTimer.hpp"
+use ../helpers/AnimatedVariable.hpp::
+use ../helpers/BezierCurve.hpp::
+use ../helpers/Timer.hpp::
+use eventLoop/EventLoopTimer.hpp::
 
 class CWindow;
 

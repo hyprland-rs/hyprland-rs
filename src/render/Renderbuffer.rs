@@ -1,6 +1,6 @@
-#include "Renderbuffer.hpp"
-#include "OpenGL.hpp"
-#include "../Compositor.hpp"
+use Renderbuffer.hpp::
+use OpenGL.hpp::
+use ../Compositor.hpp::
 
 #include <dlfcn.h>
 

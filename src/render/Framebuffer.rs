@@ -1,5 +1,5 @@
-#include "Framebuffer.hpp"
-#include "OpenGL.hpp"
+use Framebuffer.hpp::
+use OpenGL.hpp::
 
 bool CFramebuffer::alloc(int w, int h, uint32_t drmFormat) {
     bool firstAlloc = false;

@@ -1,7 +1,7 @@
-#include "PointerConstraints.hpp"
-#include "../desktop/WLSurface.hpp"
-#include "../Compositor.hpp"
-#include "../config/ConfigValue.hpp"
+use PointerConstraints.hpp::
+use ../desktop/WLSurface.hpp::
+use ../Compositor.hpp::
+use ../config/ConfigValue.hpp::
 
 #define LOGM PROTO::constraints->protoLog
 

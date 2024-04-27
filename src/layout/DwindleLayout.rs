@@ -1,7 +1,7 @@
-#include "DwindleLayout.hpp"
-#include "../render/decorations/CHyprGroupBarDecoration.hpp"
-#include "../Compositor.hpp"
-#include "../config/ConfigValue.hpp"
+use DwindleLayout.hpp::
+use ../render/decorations/CHyprGroupBarDecoration.hpp::
+use ../Compositor.hpp::
+use ../config/ConfigValue.hpp::
 
 void SDwindleNodeData::recalcSizePosRecursive(bool force, bool horizontalOverride, bool verticalOverride) {
     if (children[0]) {

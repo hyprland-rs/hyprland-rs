@@ -1,8 +1,8 @@
 #pragma once
 
-#include "IHyprLayout.hpp"
-#include "../desktop/DesktopTypes.hpp"
-#include "../config/ConfigManager.hpp"
+use IHyprLayout.hpp::
+use ../desktop/DesktopTypes.hpp::
+use ../config/ConfigManager.hpp::
 #include <vector>
 #include <list>
 #include <deque>

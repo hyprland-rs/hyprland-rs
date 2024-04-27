@@ -1,5 +1,5 @@
-#include "EventManager.hpp"
-#include "../Compositor.hpp"
+use EventManager.hpp::
+use ../Compositor.hpp::
 
 #include <errno.h>
 #include <fcntl.h>
@@ -123,7 +123,7 @@ void CEventManager::flushEvents() {
         for (auto& fd : m_dAcceptedSocketFDs) {
             try {
                 write(fd.first, eventString.c_str(), eventString.length());
-            } catch (...) {}
+            } fn ... -> catch {}
         }
     }
 

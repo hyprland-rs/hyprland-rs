@@ -1,12 +1,12 @@
 #pragma once
 
-#include "../defines.hpp"
-#include "wlr-screencopy-unstable-v1-protocol.h"
+use ../defines.hpp::
+use wlr-screencopy-unstable-v1-protocol.h::
 
 #include <list>
 #include <vector>
-#include "../managers/HookSystemManager.hpp"
-#include "../helpers/Timer.hpp"
+use ../managers/HookSystemManager.hpp::
+use ../helpers/Timer.hpp::
 
 class CMonitor;
 

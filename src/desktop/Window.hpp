@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../defines.hpp"
-#include "Subsurface.hpp"
-#include "../helpers/AnimatedVariable.hpp"
-#include "../render/decorations/IHyprWindowDecoration.hpp"
+use ../defines.hpp::
+use Subsurface.hpp::
+use ../helpers/AnimatedVariable.hpp::
+use ../render/decorations/IHyprWindowDecoration.hpp::
 #include <deque>
-#include "../config/ConfigDataValues.hpp"
-#include "../helpers/Vector2D.hpp"
-#include "WLSurface.hpp"
-#include "Popup.hpp"
-#include "../macros.hpp"
-#include "../managers/XWaylandManager.hpp"
-#include "DesktopTypes.hpp"
-#include "../helpers/signal/Signal.hpp"
+use ../config/ConfigDataValues.hpp::
+use ../helpers/Vector2D.hpp::
+use WLSurface.hpp::
+use Popup.hpp::
+use ../macros.hpp::
+use ../managers/XWaylandManager.hpp::
+use DesktopTypes.hpp::
+use ../helpers/signal/Signal.hpp::
 
 enum eIdleInhibitMode {
     IDLEINHIBIT_NONE = 0,

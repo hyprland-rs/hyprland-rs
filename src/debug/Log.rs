@@ -1,6 +1,6 @@
-#include "Log.hpp"
-#include "../defines.hpp"
-#include "../Compositor.hpp"
+use Log.hpp::
+use ../defines.hpp::
+use ../Compositor.hpp::
 
 #include <fstream>
 #include <iostream>

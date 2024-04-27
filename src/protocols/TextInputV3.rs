@@ -1,4 +1,4 @@
-#include "TextInputV3.hpp"
+use TextInputV3.hpp::
 #include <algorithm>
 
 #define LOGM PROTO::textInputV3->protoLog

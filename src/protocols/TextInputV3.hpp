@@ -4,10 +4,10 @@
 #include <vector>
 #include <cstdint>
 #include <string>
-#include "WaylandProtocol.hpp"
-#include "text-input-unstable-v3.hpp"
-#include "../helpers/signal/Signal.hpp"
-#include "../helpers/Box.hpp"
+use WaylandProtocol.hpp::
+use text-input-unstable-v3.hpp::
+use ../helpers/signal/Signal.hpp::
+use ../helpers/Box.hpp::
 
 class CTextInputV3 {
   public:

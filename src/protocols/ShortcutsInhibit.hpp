@@ -3,8 +3,8 @@
 #include <memory>
 #include <vector>
 #include <cstdint>
-#include "WaylandProtocol.hpp"
-#include "keyboard-shortcuts-inhibit-unstable-v1.hpp"
+use WaylandProtocol.hpp::
+use keyboard-shortcuts-inhibit-unstable-v1.hpp::
 
 class CKeyboardShortcutsInhibitor {
   public:

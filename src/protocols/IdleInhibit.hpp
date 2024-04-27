@@ -2,9 +2,9 @@
 
 #include <memory>
 #include <unordered_map>
-#include "WaylandProtocol.hpp"
-#include "idle-inhibit-unstable-v1.hpp"
-#include "../helpers/signal/Signal.hpp"
+use WaylandProtocol.hpp::
+use idle-inhibit-unstable-v1.hpp::
+use ../helpers/signal/Signal.hpp::
 
 class CIdleInhibitorResource;
 

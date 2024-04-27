@@ -2,9 +2,9 @@
 
 #include <memory>
 #include <vector>
-#include "WaylandProtocol.hpp"
-#include "pointer-gestures-unstable-v1.hpp"
-#include "../helpers/Vector2D.hpp"
+use WaylandProtocol.hpp::
+use pointer-gestures-unstable-v1.hpp::
+use ../helpers/Vector2D.hpp::
 
 class CPointerGestureSwipe {
   public:

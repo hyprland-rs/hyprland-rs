@@ -1,7 +1,7 @@
-#include "Subsurface.hpp"
-#include "../events/Events.hpp"
-#include "../Compositor.hpp"
-#include "../config/ConfigValue.hpp"
+use Subsurface.hpp::
+use ../events/Events.hpp::
+use ../Compositor.hpp::
+use ../config/ConfigValue.hpp::
 
 static void onNewSubsurface(void* owner, void* data);
 

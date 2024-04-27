@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../defines.hpp"
-#include "../render/Texture.hpp"
-#include "../helpers/AnimatedVariable.hpp"
+use ../defines.hpp::
+use ../render/Texture.hpp::
+use ../helpers/AnimatedVariable.hpp::
 
 #include <cairo/cairo.h>
 

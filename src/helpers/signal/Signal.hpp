@@ -5,7 +5,7 @@
 #include <vector>
 #include <memory>
 
-#include "Listener.hpp"
+use Listener.hpp::
 
 class CSignal {
   public:

@@ -1,11 +1,11 @@
 #pragma once
 
 #include <list>
-#include "../../defines.hpp"
-#include "../../helpers/WLClasses.hpp"
-#include "../../helpers/signal/Listener.hpp"
-#include "TextInput.hpp"
-#include "InputMethodPopup.hpp"
+use ../../defines.hpp::
+use ../../helpers/WLClasses.hpp::
+use ../../helpers/signal/Listener.hpp::
+use TextInput.hpp::
+use InputMethodPopup.hpp::
 #include <any>
 
 class CInputManager;

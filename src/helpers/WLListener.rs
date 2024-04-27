@@ -1,8 +1,8 @@
-#include "WLListener.hpp"
-#include "MiscFunctions.hpp"
+use WLListener.hpp::
+use MiscFunctions.hpp::
 #include <string>
-#include "../debug/Log.hpp"
-#include "Watchdog.hpp"
+use ../debug/Log.hpp::
+use Watchdog.hpp::
 
 void handleWrapped(wl_listener* listener, void* data) {
     CHyprWLListener::SWrapper* pWrap = wl_container_of(listener, pWrap, m_sListener);
@@ -12,7 +12,7 @@ void handleWrapped(wl_listener* listener, void* data) {
 
     try {
         pWrap->m_pSelf->emit(data);
-    } catch (std::exception& e) { Debug::log(ERR, "Listener {} threw or timed out and was killed by Watchdog!!! This is bad. what(): {}", (uintptr_t)listener, e.what()); }
+    } fn std::exception& e -> catch { Debug::log(ERR, "Listener {} threw or timed out and was killed by Watchdog!!! This is bad. what(): {}", (uintptr_t)listener, e.what()); }
 
     if (g_pWatchdog)
         g_pWatchdog->endWatching();

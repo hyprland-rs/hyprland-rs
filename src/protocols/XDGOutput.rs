@@ -1,6 +1,6 @@
-#include "XDGOutput.hpp"
-#include "../Compositor.hpp"
-#include "../config/ConfigValue.hpp"
+use XDGOutput.hpp::
+use ../Compositor.hpp::
+use ../config/ConfigValue.hpp::
 
 #define OUTPUT_MANAGER_VERSION                   3
 #define OUTPUT_DONE_DEPRECATED_SINCE_VERSION     3

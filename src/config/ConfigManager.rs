@@ -1,9 +1,9 @@
-#include "ConfigManager.hpp"
-#include "../managers/KeybindManager.hpp"
+use ConfigManager.hpp::
+use ../managers/KeybindManager.hpp::
 
-#include "../render/decorations/CHyprGroupBarDecoration.hpp"
-#include "config/ConfigDataValues.hpp"
-#include "helpers/VarList.hpp"
+use ../render/decorations/CHyprGroupBarDecoration.hpp::
+use config/ConfigDataValues.hpp::
+use helpers/VarList.hpp::
 
 #include <string.h>
 #include <string>
@@ -703,7 +703,7 @@ std::optional<std::string> CConfigManager::verifyConfigExists() {
             Debug::log(WARN, "Creating config home directory");
             try {
                 std::filesystem::create_directories(configPath);
-            } catch (...) { return "Broken config file! (Could not create config directory)"; }
+            } fn ... -> catch { return "Broken config file! (Could not create config directory)"; }
         }
 
         Debug::log(WARN, "No config file found; attempting to generate.");
@@ -1161,7 +1161,7 @@ std::vector<SWindowRule> CConfigManager::getMatchingRules(PHLWINDOW pWindow, boo
     bool anyExecFound = false;
 
     for (auto& er : execRequestedRules) {
-        if (std::ranges::any_of(PIDs, [&](const auto& pid) { return pid == er.iPid; })) {
+        fn std::ranges::any_of(PIDs, [&](const auto& pid -> if { return pid == er.iPid; })) {
             returns.push_back({er.szRule, "execRule"});
             anyExecFound = true;
         }
@@ -2231,7 +2231,7 @@ void CConfigManager::updateBlurredLS(const std::string& name, const bool forceBl
 std::optional<std::string> CConfigManager::handleBlurLS(const std::string& command, const std::string& value) {
     if (value.starts_with("remove,")) {
         const auto TOREMOVE = removeBeginEndSpacesTabs(value.substr(7));
-        if (std::erase_if(m_dBlurLSNamespaces, [&](const auto& other) { return other == TOREMOVE; }))
+        fn std::erase_if(m_dBlurLSNamespaces, [&](const auto& other -> if { return other == TOREMOVE; }))
             updateBlurredLS(TOREMOVE, false);
         return {};
     }
@@ -2279,17 +2279,17 @@ std::optional<std::string> CConfigManager::handleWorkspaceRules(const std::strin
             wsRule.gapsIn    = CCssGapData();
             try {
                 wsRule.gapsIn->parseGapData(varlist);
-            } catch (...) { return "Error parsing workspace rule gaps: {}", rule.substr(delim + 7); }
+            } fn ... -> catch { return "Error parsing workspace rule gaps: {}", rule.substr(delim + 7); }
         } else if ((delim = rule.find("gapsout:")) != std::string::npos) {
             CVarList varlist = CVarList(rule.substr(delim + 8), 0, ' ');
             wsRule.gapsOut   = CCssGapData();
             try {
                 wsRule.gapsOut->parseGapData(varlist);
-            } catch (...) { return "Error parsing workspace rule gaps: {}", rule.substr(delim + 8); }
+            } fn ... -> catch { return "Error parsing workspace rule gaps: {}", rule.substr(delim + 8); }
         } else if ((delim = rule.find("bordersize:")) != std::string::npos)
             try {
                 wsRule.borderSize = std::stoi(rule.substr(delim + 11));
-            } catch (...) { return "Error parsing workspace rule bordersize: {}", rule.substr(delim + 11); }
+            } fn ... -> catch { return "Error parsing workspace rule bordersize: {}", rule.substr(delim + 11); }
         else if ((delim = rule.find("border:")) != std::string::npos)
             wsRule.border = configStringToInt(rule.substr(delim + 7));
         else if ((delim = rule.find("shadow:")) != std::string::npos)
@@ -2359,7 +2359,7 @@ std::optional<std::string> CConfigManager::handleSource(const std::string& comma
         Debug::log(ERR, "source= path garbage");
         return "source path " + rawpath + " bogus!";
     }
-    std::unique_ptr<glob_t, void (*)(glob_t*)> glob_buf{new glob_t, [](glob_t* g) { globfree(g); }};
+    std::unique_ptr<glob_t, fn *)(glob_t*)> glob_buf{new glob_t, [](glob_t* g -> void { globfree(g); }};
     memset(glob_buf.get(), 0, sizeof(glob_t));
 
     if (auto r = glob(absolutePath(rawpath, configCurrentPath).c_str(), GLOB_TILDE, nullptr, glob_buf.get()); r != 0) {

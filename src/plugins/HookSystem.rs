@@ -1,6 +1,6 @@
-#include "HookSystem.hpp"
-#include "../debug/Log.hpp"
-#include "../helpers/VarList.hpp"
+use HookSystem.hpp::
+use ../debug/Log.hpp::
+use ../helpers/VarList.hpp::
 
 #define register
 #include <udis86.h>
@@ -183,7 +183,7 @@ bool CFunctionHook::hook() {
     SInstructionProbe probe;
     try {
         probe = probeMinimumJumpSize(m_pSource, sizeof(ABSOLUTE_JMP_ADDRESS) + sizeof(PUSH_RAX) + sizeof(POP_RAX));
-    } catch (std::exception& e) { return false; }
+    } fn std::exception& e -> catch { return false; }
 
     const auto PROBEFIXEDASM = fixInstructionProbeRIPCalls(probe);
 

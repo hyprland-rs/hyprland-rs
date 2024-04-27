@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../defines.hpp"
+use ../defines.hpp::
 
 namespace Init {
     bool isSudo();

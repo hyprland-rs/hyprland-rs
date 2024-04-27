@@ -1,5 +1,5 @@
 #pragma once
 
-#include "shaders/Textures.hpp"
-#include "shaders/Shadow.hpp"
-#include "shaders/Border.hpp"
+use shaders/Textures.hpp::
+use shaders/Shadow.hpp::
+use shaders/Border.hpp::

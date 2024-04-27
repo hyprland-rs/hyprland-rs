@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../Compositor.hpp"
+use ../Compositor.hpp::
 #include <fstream>
-#include "../helpers/MiscFunctions.hpp"
+use ../helpers/MiscFunctions.hpp::
 #include <functional>
 
 class CHyprCtl {

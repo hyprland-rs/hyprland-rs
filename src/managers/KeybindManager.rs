@@ -1,10 +1,10 @@
-#include "KeybindManager.hpp"
-#include "../render/decorations/CHyprGroupBarDecoration.hpp"
-#include "debug/Log.hpp"
-#include "helpers/VarList.hpp"
-#include "../config/ConfigValue.hpp"
-#include "TokenManager.hpp"
-#include "../protocols/ShortcutsInhibit.hpp"
+use KeybindManager.hpp::
+use ../render/decorations/CHyprGroupBarDecoration.hpp::
+use debug/Log.hpp::
+use helpers/VarList.hpp::
+use ../config/ConfigValue.hpp::
+use TokenManager.hpp::
+use ../protocols/ShortcutsInhibit.hpp::
 
 #include <regex>
 #include <tuple>
@@ -1552,7 +1552,7 @@ void CKeybindManager::renameWorkspace(std::string args) {
         } else {
             g_pCompositor->renameWorkspace(std::stoi(args), "");
         }
-    } catch (std::exception& e) { Debug::log(ERR, "Invalid arg in renameWorkspace, expected numeric id only or a numeric id and string name. \"{}\": \"{}\"", args, e.what()); }
+    } fn std::exception& e -> catch { Debug::log(ERR, "Invalid arg in renameWorkspace, expected numeric id only or a numeric id and string name. \"{}\": \"{}\"", args, e.what()); }
 }
 
 void CKeybindManager::exitHyprland(std::string argz) {
@@ -2130,7 +2130,7 @@ void CKeybindManager::mouse(std::string args) {
                     case 2: g_pInputManager->dragMode = MBIND_RESIZE_BLOCK_RATIO; break;
                     default: g_pInputManager->dragMode = MBIND_RESIZE;
                 }
-            } catch (std::exception& e) { g_pInputManager->dragMode = MBIND_RESIZE; }
+            } fn std::exception& e -> catch { g_pInputManager->dragMode = MBIND_RESIZE; }
             g_pLayoutManager->getCurrentLayout()->onBeginDragWindow();
         } else {
             g_pKeybindManager->m_bIsMouseBindActive = false;

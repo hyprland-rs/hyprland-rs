@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../defines.hpp"
-#include "../helpers/Timer.hpp"
+use ../defines.hpp::
+use ../helpers/Timer.hpp::
 #include <cstdint>
 #include <unordered_map>
 

@@ -1,8 +1,8 @@
 #pragma once
 
 #include <memory>
-#include "WaylandProtocol.hpp"
-#include "tearing-control-v1.hpp"
+use WaylandProtocol.hpp::
+use tearing-control-v1.hpp::
 
 class CWindow;
 class CTearingControlProtocol;

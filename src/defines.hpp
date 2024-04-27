@@ -1,8 +1,8 @@
-#include "includes.hpp"
-#include "debug/Log.hpp"
-#include "helpers/WLListener.hpp"
-#include "helpers/Color.hpp"
-#include "macros.hpp"
+use includes.hpp::
+use debug/Log.hpp::
+use helpers/WLListener.hpp::
+use helpers/Color.hpp::
+use macros.hpp::
 
 class CWindow;
 

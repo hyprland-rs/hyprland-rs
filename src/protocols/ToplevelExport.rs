@@ -1,10 +1,10 @@
-#include "ToplevelExport.hpp"
-#include "../Compositor.hpp"
-#include "ForeignToplevelWlr.hpp"
+use ToplevelExport.hpp::
+use ../Compositor.hpp::
+use ForeignToplevelWlr.hpp::
 
 #include <algorithm>
 
-#include "ToplevelExportWlrFuncs.hpp"
+use ToplevelExportWlrFuncs.hpp::
 
 #define TOPLEVEL_EXPORT_VERSION 2
 

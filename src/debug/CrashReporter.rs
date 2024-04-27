@@ -1,4 +1,4 @@
-#include "CrashReporter.hpp"
+use CrashReporter.hpp::
 #include <fcntl.h>
 #include <sys/utsname.h>
 #include <link.h>
@@ -6,8 +6,8 @@
 #include <errno.h>
 #include <sys/stat.h>
 
-#include "../plugins/PluginSystem.hpp"
-#include "../signal-safe.hpp"
+use ../plugins/PluginSystem.hpp::
+use ../signal-safe.hpp::
 
 #if defined(__DragonFly__) || defined(__FreeBSD__) || defined(__NetBSD__)
 #include <sys/sysctl.h>

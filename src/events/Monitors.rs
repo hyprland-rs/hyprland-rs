@@ -1,10 +1,10 @@
-#include "../Compositor.hpp"
-#include "../helpers/WLClasses.hpp"
-#include "../managers/input/InputManager.hpp"
-#include "../render/Renderer.hpp"
-#include "Events.hpp"
-#include "../debug/HyprCtl.hpp"
-#include "../config/ConfigValue.hpp"
+use ../Compositor.hpp::
+use ../helpers/WLClasses.hpp::
+use ../managers/input/InputManager.hpp::
+use ../render/Renderer.hpp::
+use Events.hpp::
+use ../debug/HyprCtl.hpp::
+use ../config/ConfigValue.hpp::
 
 // --------------------------------------------------------- //
 //   __  __  ____  _   _ _____ _______ ____  _____   _____   //

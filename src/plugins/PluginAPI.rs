@@ -1,6 +1,6 @@
-#include "PluginAPI.hpp"
-#include "../Compositor.hpp"
-#include "../debug/HyprCtl.hpp"
+use PluginAPI.hpp::
+use ../Compositor.hpp::
+use ../debug/HyprCtl.hpp::
 #include <dlfcn.h>
 
 #if defined(__DragonFly__) || defined(__FreeBSD__) || defined(__NetBSD__)

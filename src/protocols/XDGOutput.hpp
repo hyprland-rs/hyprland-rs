@@ -1,7 +1,7 @@
 #pragma once
 
-#include "xdg-output-unstable-v1.hpp"
-#include "WaylandProtocol.hpp"
+use xdg-output-unstable-v1.hpp::
+use WaylandProtocol.hpp::
 #include <optional>
 
 class CMonitor;

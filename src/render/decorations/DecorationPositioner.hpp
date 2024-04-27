@@ -4,7 +4,7 @@
 #include <memory>
 #include <vector>
 #include <map>
-#include "../../helpers/Box.hpp"
+use ../../helpers/Box.hpp::
 
 class CWindow;
 class IHyprWindowDecoration;

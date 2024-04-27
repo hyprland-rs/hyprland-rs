@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../defines.hpp"
+use ../defines.hpp::
 #include <optional>
 
 class CWindow; // because clangd

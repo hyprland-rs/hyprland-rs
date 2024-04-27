@@ -1,5 +1,5 @@
-#include "ForeignToplevel.hpp"
-#include "../Compositor.hpp"
+use ForeignToplevel.hpp::
+use ../Compositor.hpp::
 
 #define LOGM PROTO::foreignToplevel->protoLog
 

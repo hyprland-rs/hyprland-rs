@@ -1,6 +1,6 @@
-#include "Workspace.hpp"
-#include "../Compositor.hpp"
-#include "../config/ConfigValue.hpp"
+use Workspace.hpp::
+use ../Compositor.hpp::
+use ../config/ConfigValue.hpp::
 
 PHLWORKSPACE CWorkspace::create(int id, int monitorID, std::string name, bool special) {
     PHLWORKSPACE workspace = std::make_shared<CWorkspace>(id, monitorID, name, special);
@@ -90,7 +90,7 @@ void CWorkspace::startAnim(bool in, bool left, bool instant) {
             try {
                 auto percstr = ANIMSTYLE.substr(ANIMSTYLE.find_last_of(' ') + 1);
                 movePerc     = std::stoi(percstr.substr(0, percstr.length() - 1));
-            } catch (std::exception& e) { Debug::log(ERR, "Error in startAnim: invalid percentage"); }
+            } fn std::exception& e -> catch { Debug::log(ERR, "Error in startAnim: invalid percentage"); }
         }
 
         m_fAlpha.setValueAndWarp(1.f);

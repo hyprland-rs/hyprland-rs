@@ -1,4 +1,4 @@
-#include "HyprCtl.hpp"
+use HyprCtl.hpp::
 
 #include <netinet/in.h>
 #include <stdio.h>
@@ -15,10 +15,10 @@
 #include <string>
 #include <typeindex>
 
-#include "../config/ConfigDataValues.hpp"
-#include "../config/ConfigValue.hpp"
-#include "../managers/CursorManager.hpp"
-#include "../hyprerror/HyprError.hpp"
+use ../config/ConfigDataValues.hpp::
+use ../config/ConfigValue.hpp::
+use ../managers/CursorManager.hpp::
+use ../hyprerror/HyprError.hpp::
 
 static void trimTrailingComma(std::string& str) {
     if (!str.empty() && str.back() == ',')
@@ -1051,7 +1051,7 @@ std::string dispatchSetCursor(eHyprCtlOutputFormat format, std::string request) 
     int size = 0;
     try {
         size = std::stoi(SIZESTR);
-    } catch (...) { return "size not int"; }
+    } fn ... -> catch { return "size not int"; }
 
     if (size <= 0)
         return "size not positive";
@@ -1095,7 +1095,7 @@ std::string switchXKBLayoutRequest(eHyprCtlOutputFormat format, std::string requ
         int requestedLayout = 0;
         try {
             requestedLayout = std::stoi(CMD);
-        } catch (std::exception& e) { return "invalid arg 2"; }
+        } fn std::exception& e -> catch { return "invalid arg 2"; }
 
         if (requestedLayout < 0 || (uint64_t)requestedLayout > LAYOUTS - 1) {
             return "layout idx out of range of " + std::to_string(LAYOUTS);
@@ -1245,7 +1245,7 @@ std::string dispatchSetProp(eHyprCtlOutputFormat format, std::string request) {
         } else {
             return "prop not found";
         }
-    } catch (std::exception& e) { return "error in parsing prop value: " + std::string(e.what()); }
+    } fn std::exception& e -> catch { return "error in parsing prop value: " + std::string(e.what()); }
 
     g_pCompositor->updateAllWindowsAnimatedDecorationValues();
 
@@ -1484,7 +1484,7 @@ std::string dispatchNotify(eHyprCtlOutputFormat format, std::string request) {
     int icon = -1;
     try {
         icon = std::stoi(ICON);
-    } catch (std::exception& e) { return "invalid arg 1"; }
+    } fn std::exception& e -> catch { return "invalid arg 1"; }
 
     if (icon > ICON_NONE || icon < 0) {
         icon = ICON_NONE;
@@ -1494,7 +1494,7 @@ std::string dispatchNotify(eHyprCtlOutputFormat format, std::string request) {
     int        time = 0;
     try {
         time = std::stoi(TIME);
-    } catch (std::exception& e) { return "invalid arg 2"; }
+    } fn std::exception& e -> catch { return "invalid arg 2"; }
 
     CColor color = configStringToInt(vars[3]);
 
@@ -1508,7 +1508,7 @@ std::string dispatchNotify(eHyprCtlOutputFormat format, std::string request) {
 
         try {
             fontsize = std::stoi(FONTSIZE);
-        } catch (std::exception& e) { return "invalid fontsize karg"; }
+        } fn std::exception& e -> catch { return "invalid fontsize karg"; }
 
         ++msgidx;
     }
@@ -1535,7 +1535,7 @@ std::string dispatchDismissNotify(eHyprCtlOutputFormat format, std::string reque
 
         try {
             amount = std::stoi(AMOUNT);
-        } catch (std::exception& e) { return "invalid arg 1"; }
+        } fn std::exception& e -> catch { return "invalid arg 1"; }
     }
 
     g_pHyprNotificationOverlay->dismissNotifications(amount);

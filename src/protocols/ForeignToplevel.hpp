@@ -3,8 +3,8 @@
 #include <memory>
 #include <vector>
 #include <unordered_map>
-#include "WaylandProtocol.hpp"
-#include "ext-foreign-toplevel-list-v1.hpp"
+use WaylandProtocol.hpp::
+use ext-foreign-toplevel-list-v1.hpp::
 
 class CForeignToplevelHandle {
   public:

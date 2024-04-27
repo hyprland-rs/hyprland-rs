@@ -1,6 +1,6 @@
-#include "InputManager.hpp"
-#include "../../Compositor.hpp"
-#include "../../protocols/IdleInhibit.hpp"
+use InputManager.hpp::
+use ../../Compositor.hpp::
+use ../../protocols/IdleInhibit.hpp::
 
 void CInputManager::newIdleInhibitor(std::any inhibitor) {
     const auto PINHIBIT = m_vIdleInhibitors.emplace_back(std::make_unique<SIdleInhibitor>()).get();

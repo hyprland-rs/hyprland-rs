@@ -3,9 +3,9 @@
 #include <memory>
 #include <vector>
 #include <cstdint>
-#include "WaylandProtocol.hpp"
-#include "relative-pointer-unstable-v1.hpp"
-#include "../helpers/Vector2D.hpp"
+use WaylandProtocol.hpp::
+use relative-pointer-unstable-v1.hpp::
+use ../helpers/Vector2D.hpp::
 
 class CRelativePointer {
   public:

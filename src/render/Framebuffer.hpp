@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../defines.hpp"
-#include "Texture.hpp"
+use ../defines.hpp::
+use Texture.hpp::
 
 class CFramebuffer {
   public:

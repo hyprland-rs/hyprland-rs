@@ -3,8 +3,8 @@
 #include <memory>
 #include <vector>
 #include <unordered_map>
-#include "WaylandProtocol.hpp"
-#include "xdg-decoration-unstable-v1.hpp"
+use WaylandProtocol.hpp::
+use xdg-decoration-unstable-v1.hpp::
 
 class CXDGDecoration {
   public:

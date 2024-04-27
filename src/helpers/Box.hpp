@@ -1,8 +1,8 @@
 #pragma once
 
-#include "Vector2D.hpp"
-#include "../SharedDefs.hpp"
-#include "../includes.hpp"
+use Vector2D.hpp::
+use ../SharedDefs.hpp::
+use ../includes.hpp::
 
 class CBox {
   public:

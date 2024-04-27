@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../defines.hpp"
-#include "../helpers/Monitor.hpp"
-#include "../render/Texture.hpp"
+use ../defines.hpp::
+use ../helpers/Monitor.hpp::
+use ../render/Texture.hpp::
 #include <deque>
 #include <cairo/cairo.h>
 #include <unordered_map>

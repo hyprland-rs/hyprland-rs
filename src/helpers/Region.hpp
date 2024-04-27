@@ -1,8 +1,8 @@
 #pragma once
 #include <pixman.h>
 #include <vector>
-#include "Vector2D.hpp"
-#include "Box.hpp"
+use Vector2D.hpp::
+use Box.hpp::
 
 struct wlr_box;
 

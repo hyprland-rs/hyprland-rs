@@ -1,5 +1,5 @@
-#include "GlobalShortcuts.hpp"
-#include "../Compositor.hpp"
+use GlobalShortcuts.hpp::
+use ../Compositor.hpp::
 
 #define GLOBAL_SHORTCUTS_VERSION 1
 

@@ -1,10 +1,10 @@
-#include "Events.hpp"
+use Events.hpp::
 
-#include "../Compositor.hpp"
-#include "../helpers/WLClasses.hpp"
-#include "../managers/input/InputManager.hpp"
-#include "../render/Renderer.hpp"
-#include "../managers/CursorManager.hpp"
+use ../Compositor.hpp::
+use ../helpers/WLClasses.hpp::
+use ../managers/input/InputManager.hpp::
+use ../render/Renderer.hpp::
+use ../managers/CursorManager.hpp::
 
 // ------------------------------ //
 //   __  __ _____  _____  _____   //

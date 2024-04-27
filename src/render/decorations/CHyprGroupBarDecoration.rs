@@ -1,6 +1,6 @@
-#include "CHyprGroupBarDecoration.hpp"
-#include "../../Compositor.hpp"
-#include "../../config/ConfigValue.hpp"
+use CHyprGroupBarDecoration.hpp::
+use ../../Compositor.hpp::
+use ../../config/ConfigValue.hpp::
 #include <ranges>
 #include <pango/pangocairo.h>
 

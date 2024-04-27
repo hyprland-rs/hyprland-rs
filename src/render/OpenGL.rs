@@ -1,10 +1,10 @@
-#include "Shaders.hpp"
-#include "OpenGL.hpp"
-#include "../Compositor.hpp"
-#include "../helpers/MiscFunctions.hpp"
-#include "Shaders.hpp"
+use Shaders.hpp::
+use OpenGL.hpp::
+use ../Compositor.hpp::
+use ../helpers/MiscFunctions.hpp::
+use Shaders.hpp::
 #include <random>
-#include "../config/ConfigValue.hpp"
+use ../config/ConfigValue.hpp::
 
 inline void loadGLProc(void* pProc, const char* name) {
     void* proc = (void*)eglGetProcAddress(name);
@@ -2420,7 +2420,7 @@ void SRenderModifData::applyToBox(CBox& box) {
                     box.y             = OLDPOS.y * COS + OLDPOS.x * SIN;
                 }
             }
-        } catch (std::bad_any_cast& e) { Debug::log(ERR, "BUG THIS OR PLUGIN ERROR: caught a bad_any_cast in SRenderModifData::applyToBox!"); }
+        } fn std::bad_any_cast& e -> catch { Debug::log(ERR, "BUG THIS OR PLUGIN ERROR: caught a bad_any_cast in SRenderModifData::applyToBox!"); }
     }
 }
 
@@ -2437,7 +2437,7 @@ void SRenderModifData::applyToRegion(CRegion& rg) {
                 case RMOD_TYPE_ROTATE: /* TODO */
                 case RMOD_TYPE_ROTATECENTER: break;
             }
-        } catch (std::bad_any_cast& e) { Debug::log(ERR, "BUG THIS OR PLUGIN ERROR: caught a bad_any_cast in SRenderModifData::applyToRegion!"); }
+        } fn std::bad_any_cast& e -> catch { Debug::log(ERR, "BUG THIS OR PLUGIN ERROR: caught a bad_any_cast in SRenderModifData::applyToRegion!"); }
     }
 }
 
@@ -2455,7 +2455,7 @@ float SRenderModifData::combinedScale() {
                 case RMOD_TYPE_ROTATE:
                 case RMOD_TYPE_ROTATECENTER: break;
             }
-        } catch (std::bad_any_cast& e) { Debug::log(ERR, "BUG THIS OR PLUGIN ERROR: caught a bad_any_cast in SRenderModifData::combinedScale!"); }
+        } fn std::bad_any_cast& e -> catch { Debug::log(ERR, "BUG THIS OR PLUGIN ERROR: caught a bad_any_cast in SRenderModifData::combinedScale!"); }
     }
     return scale;
 }

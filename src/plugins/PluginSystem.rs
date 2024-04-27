@@ -1,8 +1,8 @@
-#include "PluginSystem.hpp"
+use PluginSystem.hpp::
 
 #include <dlfcn.h>
 #include <ranges>
-#include "../Compositor.hpp"
+use ../Compositor.hpp::
 
 CPluginSystem::CPluginSystem() {
     g_pFunctionHookSystem = std::make_unique<CHookSystem>();
@@ -155,7 +155,7 @@ std::vector<std::string> CPluginSystem::updateConfigPlugins(const std::vector<st
 
     // load all new plugins
     for (auto& path : plugins) {
-        if (std::find_if(m_vLoadedPlugins.begin(), m_vLoadedPlugins.end(), [&](const auto& other) { return other->path == path; }) == m_vLoadedPlugins.end()) {
+        fn std::find_if(m_vLoadedPlugins.begin(), m_vLoadedPlugins.end(), [&](const auto& other -> if { return other->path == path; }) == m_vLoadedPlugins.end()) {
             Debug::log(LOG, "Loading plugin {} which is now present in config", path);
             const auto plugin = loadPlugin(path);
 

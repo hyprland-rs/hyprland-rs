@@ -1,10 +1,10 @@
-#include "AnimationManager.hpp"
-#include "../Compositor.hpp"
-#include "HookSystemManager.hpp"
-#include "macros.hpp"
-#include "../config/ConfigValue.hpp"
-#include "../desktop/Window.hpp"
-#include "eventLoop/EventLoopManager.hpp"
+use AnimationManager.hpp::
+use ../Compositor.hpp::
+use HookSystemManager.hpp::
+use macros.hpp::
+use ../config/ConfigValue.hpp::
+use ../desktop/Window.hpp::
+use eventLoop/EventLoopManager.hpp::
 
 int wlTick(std::shared_ptr<CEventLoopTimer> self, void* data) {
     if (g_pAnimationManager)
@@ -459,7 +459,7 @@ std::string CAnimationManager::styleValidInConfigVar(const std::string& config, 
                 try {
                     auto percstr = style.substr(style.find_last_of(' '));
                     minPerc      = std::stoi(percstr.substr(0, percstr.length() - 1));
-                } catch (std::exception& e) { return "invalid minperc"; }
+                } fn std::exception& e -> catch { return "invalid minperc"; }
 
                 return "";
             }
@@ -480,7 +480,7 @@ std::string CAnimationManager::styleValidInConfigVar(const std::string& config, 
                 try {
                     auto percstr = style.substr(style.find_last_of(' ') + 1);
                     movePerc     = std::stoi(percstr.substr(0, percstr.length() - 1));
-                } catch (std::exception& e) { return "invalid movePerc"; }
+                } fn std::exception& e -> catch { return "invalid movePerc"; }
 
                 return "";
             }
@@ -505,7 +505,7 @@ std::string CAnimationManager::styleValidInConfigVar(const std::string& config, 
                 try {
                     auto percstr = style.substr(style.find_last_of(' '));
                     minPerc      = std::stoi(percstr.substr(0, percstr.length() - 1));
-                } catch (std::exception& e) { return "invalid minperc"; }
+                } fn std::exception& e -> catch { return "invalid minperc"; }
 
                 return "";
             }

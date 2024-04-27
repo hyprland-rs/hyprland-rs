@@ -1,4 +1,4 @@
-#include "XDGDecoration.hpp"
+use XDGDecoration.hpp::
 #include <algorithm>
 
 #define LOGM PROTO::xdgDecoration->protoLog

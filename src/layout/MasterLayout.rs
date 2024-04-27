@@ -1,9 +1,9 @@
-#include "MasterLayout.hpp"
-#include "../Compositor.hpp"
-#include "../render/decorations/CHyprGroupBarDecoration.hpp"
-#include "config/ConfigDataValues.hpp"
+use MasterLayout.hpp::
+use ../Compositor.hpp::
+use ../render/decorations/CHyprGroupBarDecoration.hpp::
+use config/ConfigDataValues.hpp::
 #include <ranges>
-#include "../config/ConfigValue.hpp"
+use ../config/ConfigValue.hpp::
 
 SMasterNodeData* CHyprMasterLayout::getNodeFromWindow(PHLWINDOW pWindow) {
     for (auto& nd : m_lMasterNodesData) {

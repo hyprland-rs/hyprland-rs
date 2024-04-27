@@ -2,8 +2,8 @@
 
 #include <memory>
 #include <unordered_map>
-#include "WaylandProtocol.hpp"
-#include "fractional-scale-v1.hpp"
+use WaylandProtocol.hpp::
+use fractional-scale-v1.hpp::
 
 class CFractionalScaleProtocol;
 

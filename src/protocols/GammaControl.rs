@@ -1,8 +1,8 @@
-#include "GammaControl.hpp"
+use GammaControl.hpp::
 #include <fcntl.h>
 #include <unistd.h>
-#include "../helpers/Monitor.hpp"
-#include "../Compositor.hpp"
+use ../helpers/Monitor.hpp::
+use ../Compositor.hpp::
 
 #define LOGM PROTO::gamma->protoLog
 

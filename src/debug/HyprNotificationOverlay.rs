@@ -1,5 +1,5 @@
-#include "HyprNotificationOverlay.hpp"
-#include "../Compositor.hpp"
+use HyprNotificationOverlay.hpp::
+use ../Compositor.hpp::
 #include <pango/pangocairo.h>
 
 CHyprNotificationOverlay::CHyprNotificationOverlay() {

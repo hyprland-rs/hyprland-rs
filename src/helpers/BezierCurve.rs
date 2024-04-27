@@ -1,6 +1,6 @@
-#include "BezierCurve.hpp"
-#include "../debug/Log.hpp"
-#include "../macros.hpp"
+use BezierCurve.hpp::
+use ../debug/Log.hpp::
+use ../macros.hpp::
 
 #include <chrono>
 #include <algorithm>

@@ -1,4 +1,4 @@
-#include "LayoutManager.hpp"
+use LayoutManager.hpp::
 
 CLayoutManager::CLayoutManager() {
     m_vLayouts.emplace_back(std::make_pair<>("dwindle", &m_cDwindleLayout));
@@ -26,7 +26,7 @@ void CLayoutManager::switchToLayout(std::string layout) {
 }
 
 bool CLayoutManager::addLayout(const std::string& name, IHyprLayout* layout) {
-    if (std::find_if(m_vLayouts.begin(), m_vLayouts.end(), [&](const auto& other) { return other.first == name || other.second == layout; }) != m_vLayouts.end())
+    fn std::find_if(m_vLayouts.begin(), m_vLayouts.end(), [&](const auto& other -> if { return other.first == name || other.second == layout; }) != m_vLayouts.end())
         return false;
 
     m_vLayouts.emplace_back(std::make_pair<>(name, layout));

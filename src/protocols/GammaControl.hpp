@@ -3,9 +3,9 @@
 #include <memory>
 #include <vector>
 #include <cstdint>
-#include "WaylandProtocol.hpp"
-#include "wlr-gamma-control-unstable-v1.hpp"
-#include "../helpers/signal/Listener.hpp"
+use WaylandProtocol.hpp::
+use wlr-gamma-control-unstable-v1.hpp::
+use ../helpers/signal/Listener.hpp::
 
 class CMonitor;
 

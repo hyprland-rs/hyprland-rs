@@ -1,7 +1,7 @@
-#include "ThreadManager.hpp"
-#include "../debug/HyprCtl.hpp"
-#include "../Compositor.hpp"
-#include "../config/ConfigValue.hpp"
+use ThreadManager.hpp::
+use ../debug/HyprCtl.hpp::
+use ../Compositor.hpp::
+use ../config/ConfigValue.hpp::
 
 int slowUpdate = 0;
 

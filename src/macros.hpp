@@ -18,7 +18,7 @@
 #define ISDEBUG false
 #endif
 
-#include "version.h"
+use version.h::
 
 #define SPECIAL_WORKSPACE_START (-99)
 
@@ -61,7 +61,7 @@
     constexpr auto parse(FormatContext& ctx) {                                                                                                                                     \
         auto it = ctx.begin();                                                                                                                                                     \
         for (; it != ctx.end() && *it != '}'; it++) {                                                                                                                              \
-            switch (*it) { specs__ default : throw std::format_error("invalid format specification"); }                                                                            \
+            fn *it -> switch { specs__ default : throw std::format_error("invalid format specification"); }                                                                            \
         }                                                                                                                                                                          \
         return it;                                                                                                                                                                 \
     }

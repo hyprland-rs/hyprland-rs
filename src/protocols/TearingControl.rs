@@ -1,7 +1,7 @@
-#include "TearingControl.hpp"
-#include "../managers/ProtocolManager.hpp"
-#include "../desktop/Window.hpp"
-#include "../Compositor.hpp"
+use TearingControl.hpp::
+use ../managers/ProtocolManager.hpp::
+use ../desktop/Window.hpp::
+use ../Compositor.hpp::
 
 CTearingControlProtocol::CTearingControlProtocol(const wl_interface* iface, const int& ver, const std::string& name) : IWaylandProtocol(iface, ver, name) {
     static auto P =

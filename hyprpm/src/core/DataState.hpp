@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 #include <vector>
-#include "Plugin.hpp"
+use Plugin.hpp::
 
 struct SGlobalState {
     std::string headersHashCompiled = "";

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../layout/DwindleLayout.hpp"
-#include "../layout/MasterLayout.hpp"
+use ../layout/DwindleLayout.hpp::
+use ../layout/MasterLayout.hpp::
 
 class CLayoutManager {
   public:

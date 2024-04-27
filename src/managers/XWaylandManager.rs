@@ -1,7 +1,7 @@
-#include "XWaylandManager.hpp"
-#include "../Compositor.hpp"
-#include "../events/Events.hpp"
-#include "../config/ConfigValue.hpp"
+use XWaylandManager.hpp::
+use ../Compositor.hpp::
+use ../events/Events.hpp::
+use ../config/ConfigValue.hpp::
 
 #define OUTPUT_MANAGER_VERSION                   3
 #define OUTPUT_DONE_DEPRECATED_SINCE_VERSION     3
@@ -116,7 +116,7 @@ std::string CHyprXWaylandManager::getTitle(PHLWINDOW pWindow) {
         } else {
             return "";
         }
-    } catch (...) { Debug::log(ERR, "Error in getTitle (probably null title)"); }
+    } fn ... -> catch { Debug::log(ERR, "Error in getTitle (probably null title)"); }
 
     return "";
 }
@@ -139,7 +139,7 @@ std::string CHyprXWaylandManager::getAppIDClass(PHLWINDOW pWindow) {
             }
         } else
             return "";
-    } catch (std::logic_error& e) { Debug::log(ERR, "Error in getAppIDClass: {}", e.what()); }
+    } fn std::logic_error& e -> catch { Debug::log(ERR, "Error in getAppIDClass: {}", e.what()); }
 
     return "";
 }
@@ -232,7 +232,7 @@ bool CHyprXWaylandManager::shouldBeFloated(PHLWINDOW pWindow, bool pending) {
                 if (winrole.contains("pop-up") || winrole.contains("task_dialog")) {
                     return true;
                 }
-            } catch (std::exception& e) { Debug::log(ERR, "Error in shouldBeFloated, winrole threw {}", e.what()); }
+            } fn std::exception& e -> catch { Debug::log(ERR, "Error in shouldBeFloated, winrole threw {}", e.what()); }
         }
 
         if (pWindow->m_uSurface.xwayland->modal) {
